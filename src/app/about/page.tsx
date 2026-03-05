@@ -5,29 +5,32 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function AboutPage() {
+  const ghibliPortrait = PlaceHolderImages.find(img => img.id === "ghibli-portrait");
+
   return (
     <div className="min-h-screen pt-20">
       <Navbar />
       
       <section className="px-4 sm:px-6 lg:px-8 py-20 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start">
-          <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl border border-border/50 group">
             <Image
-              src="https://picsum.photos/seed/abhiram/800/800"
-              alt="Abhiram Desai"
+              src={ghibliPortrait?.imageUrl || "https://picsum.photos/seed/ghibli-sf/800/800"}
+              alt="Abhiram Desai Ghibli Style"
               fill
-              className="object-cover"
-              data-ai-hint="professional portrait"
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+              data-ai-hint="ghibli san francisco"
             />
           </div>
 
           <div className="space-y-8">
             <div>
-              <Badge className="mb-4 bg-accent/20 text-accent border-accent">About Me</Badge>
-              <h1 className="text-5xl font-headline font-bold text-primary mb-6">Abhiram Desai</h1>
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <Badge className="mb-4 bg-foreground/5 text-foreground border-border/50 font-bold tracking-[0.2em] uppercase text-[10px] px-4 py-1">About Me</Badge>
+              <h1 className="text-5xl md:text-6xl font-headline font-bold text-foreground mb-6 tracking-tight">Abhiram Desai</h1>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-light">
                 <p>
                   I am an AI Product Manager based in the United States, passionate about transforming complex technologies into simple, impactful user experiences. With a background in Data Analytics Engineering and a track record at Amazon and Philips, I specialize in bridging the gap between technical feasibility and business value.
                 </p>
@@ -40,32 +43,40 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 pt-4">
-              <div>
-                <h4 className="font-bold text-sm uppercase tracking-widest text-accent mb-2">Education</h4>
-                <ul className="space-y-1 text-sm">
-                  <li className="font-bold text-primary">MS Data Analytics</li>
-                  <li className="text-muted-foreground">Northeastern University</li>
-                  <li className="font-bold text-primary pt-2">B.Tech Electrical</li>
-                  <li className="text-muted-foreground">PES University</li>
+            <div className="grid grid-cols-2 gap-8 pt-8 border-t border-border/50">
+              <div className="space-y-4">
+                <h4 className="font-bold text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Education</h4>
+                <ul className="space-y-3 text-sm">
+                  <li>
+                    <p className="font-bold text-foreground">MS Data Analytics</p>
+                    <p className="text-muted-foreground font-light">Northeastern University</p>
+                  </li>
+                  <li>
+                    <p className="font-bold text-foreground pt-1">B.Tech Electrical</p>
+                    <p className="text-muted-foreground font-light">PES University</p>
+                  </li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-bold text-sm uppercase tracking-widest text-accent mb-2">Certifications</h4>
-                <ul className="space-y-1 text-sm">
-                  <li className="font-bold text-primary">Certified ScrumMaster</li>
-                  <li className="text-muted-foreground">CSM</li>
-                  <li className="font-bold text-primary pt-2">CAPM</li>
-                  <li className="text-muted-foreground">PMI</li>
+              <div className="space-y-4">
+                <h4 className="font-bold text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Certifications</h4>
+                <ul className="space-y-3 text-sm">
+                  <li>
+                    <p className="font-bold text-foreground">Certified ScrumMaster</p>
+                    <p className="text-muted-foreground font-light">CSM</p>
+                  </li>
+                  <li>
+                    <p className="font-bold text-foreground pt-1">CAPM</p>
+                    <p className="text-muted-foreground font-light">PMI</p>
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <div className="flex gap-4 pt-4">
-              <Button asChild className="bg-primary hover:bg-primary/90 rounded-full">
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button asChild className="rounded-full px-10 font-medium bg-foreground text-background hover:bg-foreground/90 transition-all">
                 <Link href="/resume">View Full Resume <ExternalLink className="ml-2" size={16} /></Link>
               </Button>
-              <Button variant="outline" className="rounded-full border-accent text-accent">
+              <Button variant="outline" className="rounded-full border-border/50 px-10 font-medium hover:bg-foreground hover:text-background transition-colors">
                 Download CV <Download className="ml-2" size={16} />
               </Button>
             </div>
@@ -73,17 +84,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-4 sm:px-6 lg:px-8 py-20 bg-muted/30">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <h2 className="text-3xl font-headline font-bold text-center">My Philosophy</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 bg-card rounded-2xl shadow-sm border border-transparent hover:border-accent transition-all">
-              <h3 className="text-xl font-bold mb-3">User-Centric AI</h3>
-              <p className="text-muted-foreground">AI shouldn't just be powerful; it should be intuitive. I focus on building tools that users actively rely on for real-world decision-making.</p>
+      <section className="px-4 sm:px-6 lg:px-8 py-24 bg-muted/5 border-t border-border/50">
+        <div className="max-w-4xl mx-auto space-y-20">
+          <div className="text-center space-y-4">
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">Core Values</span>
+            <h2 className="text-4xl font-headline font-bold tracking-tight">My Philosophy</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-16">
+            <div className="space-y-4 group">
+              <div className="h-px w-12 bg-foreground/20 group-hover:w-20 transition-all duration-500" />
+              <h3 className="text-xl font-bold tracking-tight">User-Centric AI</h3>
+              <p className="text-muted-foreground font-light leading-relaxed">
+                AI shouldn't just be powerful; it should be intuitive. I focus on building tools that users actively rely on for real-world decision-making.
+              </p>
             </div>
-            <div className="p-8 bg-card rounded-2xl shadow-sm border border-transparent hover:border-accent transition-all">
-              <h3 className="text-xl font-bold mb-3">Velocity & Validation</h3>
-              <p className="text-muted-foreground">I believe in shipping fast to learn fast. Rapid prototyping and measurable success metrics are at the core of my PM process.</p>
+            <div className="space-y-4 group">
+              <div className="h-px w-12 bg-foreground/20 group-hover:w-20 transition-all duration-500" />
+              <h3 className="text-xl font-bold tracking-tight">Velocity & Validation</h3>
+              <p className="text-muted-foreground font-light leading-relaxed">
+                I believe in shipping fast to learn fast. Rapid prototyping and measurable success metrics are at the core of my PM process.
+              </p>
             </div>
           </div>
         </div>
