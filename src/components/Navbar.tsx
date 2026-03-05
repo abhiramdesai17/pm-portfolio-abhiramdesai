@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -6,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { name: "Work", path: "/" },
@@ -41,9 +41,11 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <ThemeToggle />
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center gap-4">
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-muted-foreground hover:text-primary transition-colors"

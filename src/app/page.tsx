@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 import { WorkCard } from "@/components/WorkCard";
 import { AIStoryteller } from "@/components/AIStoryteller";
@@ -6,6 +5,7 @@ import { SkillMatrix } from "@/components/SkillMatrix";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const projects = [
@@ -44,13 +44,15 @@ const projects = [
 ];
 
 export default function Home() {
+  const ghibliPortrait = PlaceHolderImages.find(img => img.id === "ghibli-portrait");
+
   return (
     <div className="min-h-screen pt-20">
       <Navbar />
       
       {/* Hero Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-32 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1 text-left space-y-6">
             <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-primary leading-tight">
               Bridging the gap between <span className="text-accent">AI Potential</span> and <span className="underline decoration-accent underline-offset-8">User Impact.</span>
@@ -73,6 +75,20 @@ export default function Home() {
                   <Mail size={20} />
                 </Link>
               </div>
+            </div>
+          </div>
+          
+          <div className="flex-1 w-full max-w-md">
+            <div className="relative aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-4 border-accent/20 group">
+              <Image
+                src={ghibliPortrait?.imageUrl || "https://picsum.photos/seed/ghibli-me/800/800"}
+                alt="Abhiram Desai Ghibli Style"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                priority
+                data-ai-hint="ghibli anime illustration"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>

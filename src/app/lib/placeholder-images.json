@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -6,6 +5,12 @@
       "description": "Professional portrait of a product manager",
       "imageUrl": "https://picsum.photos/seed/abhiram/800/800",
       "imageHint": "professional portrait"
+    },
+    {
+      "id": "ghibli-portrait",
+      "description": "Ghibli style illustration of a product manager",
+      "imageUrl": "https://picsum.photos/seed/ghibli-me/800/800",
+      "imageHint": "ghibli anime illustration"
     },
     {
       "id": "project-mental-health",

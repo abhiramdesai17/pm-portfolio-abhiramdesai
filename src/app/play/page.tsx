@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/Navbar";
-import { AIPortraitTool } from "@/components/AIPortraitTool";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -44,14 +43,9 @@ export default function PlayPage() {
           </p>
         </div>
 
-        {/* New AI Tool Integration */}
-        <div className="mb-24">
-          <AIPortraitTool />
-        </div>
-
         <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
           {activities.map((activity, i) => (
-            <Card key={i} className="break-inside-avoid border-none shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group">
+            <Card key={i} className="break-inside-avoid border-none shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group bg-card">
               <div className="relative">
                 <img
                   src={activity.image}
