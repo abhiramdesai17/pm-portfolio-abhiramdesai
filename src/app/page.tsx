@@ -1,12 +1,18 @@
 import { Navbar } from "@/components/Navbar";
 import { WorkCard } from "@/components/WorkCard";
-import { AIStoryteller } from "@/components/AIStoryteller";
 import { SkillMatrix } from "@/components/SkillMatrix";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+
+const experiences = [
+  { name: "Amazon", id: "logo-amazon" },
+  { name: "Philips", id: "logo-philips" },
+  { name: "Northeastern", id: "logo-northeastern" },
+  { name: "Accenture", id: "logo-accenture" }
+];
 
 const projects = [
   {
@@ -44,6 +50,7 @@ const projects = [
 ];
 
 export default function Home() {
+  const spaceNeedle = PlaceHolderImages.find(img => img.id === "space-needle");
   const ghibliPortrait = PlaceHolderImages.find(img => img.id === "ghibli-portrait");
 
   return (
@@ -51,92 +58,126 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-32 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-16">
-          <div className="flex-1 text-left space-y-8">
-            <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tight text-foreground leading-[1.1]">
-              Bridging the gap between <span className="text-muted-foreground">AI Potential</span> and <span className="underline decoration-muted-foreground underline-offset-8">User Impact.</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed font-light">
-              Hi, I'm Abhiram Desai. An AI Product Manager experienced in identifying high-leverage opportunities, rapidly prototyping solutions, and owning end-to-end product delivery.
+      <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-36 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-20">
+          <div className="flex-1 space-y-10">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-sm font-medium text-muted-foreground animate-in fade-in slide-in-from-left-4 duration-500">
+                <div className="relative w-6 h-6 rounded-full overflow-hidden border border-border">
+                  <Image 
+                    src={spaceNeedle?.imageUrl || ""} 
+                    alt="Space Needle" 
+                    fill 
+                    className="object-cover"
+                    data-ai-hint="space needle"
+                  />
+                </div>
+                <span>Based in Seattle</span>
+                <span className="w-1 h-1 rounded-full bg-border" />
+                <span className="text-foreground/80">Open to relocation</span>
+              </div>
+              <h1 className="text-6xl md:text-8xl font-headline font-bold tracking-tight text-foreground leading-[1.05]">
+                Bridging AI Potential and User Impact.
+              </h1>
+            </div>
+            <p className="text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light">
+              Hi, I'm Abhiram Desai. An AI Product Manager specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
             </p>
-            <div className="flex flex-wrap gap-6 pt-4">
-              <Button asChild size="lg" className="rounded-full px-10 font-medium">
-                <Link href="#work">View Work <ArrowRight className="ml-2" size={18} /></Link>
+            <div className="flex flex-wrap gap-8 items-center pt-4">
+              <Button asChild size="lg" className="rounded-full h-14 px-10 text-lg font-medium shadow-lg hover:shadow-xl transition-all">
+                <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={20} /></Link>
               </Button>
-              <div className="flex items-center gap-6">
-                <Link href="https://github.com/abhiramdesai17" target="_blank" className="text-muted-foreground hover:text-foreground transition-all">
-                  <Github size={24} />
+              <div className="flex items-center gap-8">
+                <Link href="https://linkedin.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-all transform hover:scale-110">
+                  <Linkedin size={28} />
                 </Link>
-                <Link href="https://linkedin.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-all">
-                  <Linkedin size={24} />
-                </Link>
-                <Link href="mailto:abhiramdesai.99@gmail.com" className="text-muted-foreground hover:text-foreground transition-all">
-                  <Mail size={24} />
+                <Link href="mailto:abhiramdesai.99@gmail.com" className="text-muted-foreground hover:text-foreground transition-all transform hover:scale-110">
+                  <Mail size={28} />
                 </Link>
               </div>
             </div>
           </div>
           
-          <div className="flex-1 w-full max-w-md">
-            <div className="relative aspect-square rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 shadow-sm border border-border group">
+          <div className="hidden lg:block flex-1 w-full max-w-lg">
+            <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl border border-border/50 group">
               <Image
-                src={ghibliPortrait?.imageUrl || "https://picsum.photos/seed/ghibli-me/800/800"}
+                src={ghibliPortrait?.imageUrl || ""}
                 alt="Abhiram Desai Ghibli Style"
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 priority
-                data-ai-hint="ghibli anime illustration"
+                data-ai-hint="ghibli illustration"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-24 bg-muted/20 border-y border-border/50">
+      {/* Experience Section (Logos) */}
+      <section className="px-4 sm:px-6 lg:px-8 py-20 border-y border-border/40 bg-muted/5">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-3xl font-headline font-bold tracking-tight mb-4">Core Expertise</h2>
-            <p className="text-muted-foreground font-light max-w-xl">A specialized technical toolkit focused on the intersection of product strategy and machine learning.</p>
+          <p className="text-center text-[10px] uppercase tracking-[0.4em] font-bold text-muted-foreground mb-16">Previously leading products at</p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
+            {experiences.map((exp) => {
+              const logo = PlaceHolderImages.find(img => img.id === exp.id);
+              return (
+                <div key={exp.name} className="group flex flex-col items-center gap-4 transition-all hover:-translate-y-2">
+                  <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full border border-border bg-background p-6 shadow-sm group-hover:shadow-md transition-all overflow-hidden flex items-center justify-center">
+                    <Image 
+                      src={logo?.imageUrl || ""} 
+                      alt={exp.name} 
+                      fill 
+                      className="object-contain p-4 filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                      data-ai-hint={`${exp.name} logo`}
+                    />
+                  </div>
+                  <span className="text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-muted-foreground">{exp.name}</span>
+                </div>
+              );
+            })}
           </div>
-          <SkillMatrix />
         </div>
       </section>
 
-      {/* Work Section */}
-      <section id="work" className="px-4 sm:px-6 lg:px-8 py-24 max-w-7xl mx-auto">
-        <div className="flex justify-between items-end mb-20">
-          <div>
-            <span className="text-muted-foreground font-medium uppercase tracking-[0.2em] text-xs mb-4 block">Selected Projects</span>
-            <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight">Case Studies</h2>
+      {/* Work Section (Case Studies) */}
+      <section id="work" className="px-4 sm:px-6 lg:px-8 py-32 max-w-7xl mx-auto">
+        <div className="flex justify-between items-end mb-24">
+          <div className="space-y-4">
+            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground">Case Studies</span>
+            <h2 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter">Selected Work</h2>
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-24">
           {projects.map((project) => (
             <WorkCard key={project.slug} {...project} />
           ))}
         </div>
       </section>
 
-      {/* AI Storyteller Tool Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-24 border-t border-border/50">
-        <AIStoryteller />
+      {/* Skills Section (Core Expertise) */}
+      <section className="px-4 sm:px-6 lg:px-8 py-32 bg-muted/20 border-t border-border/40">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-20 space-y-4">
+             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground">Capabilities</span>
+            <h2 className="text-5xl font-headline font-bold tracking-tighter">Core Expertise</h2>
+          </div>
+          <SkillMatrix />
+        </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-background py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-            <h2 className="text-4xl font-headline font-bold tracking-tight">Let's build together.</h2>
-            <Button asChild variant="outline" size="lg" className="rounded-full border-border hover:bg-foreground hover:text-background transition-colors px-10">
+      <footer className="border-t bg-background py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+            <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tight max-w-xl">Let's build the future together.</h2>
+            <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-foreground hover:bg-foreground hover:text-background transition-all px-12 h-16 text-lg font-bold">
               <a href="mailto:abhiramdesai.99@gmail.com">Get in Touch</a>
             </Button>
           </div>
-          <div className="pt-12 flex flex-col md:flex-row justify-between gap-8 text-sm text-muted-foreground border-t border-border/50">
-            <p className="font-light">© {new Date().getFullYear()} Abhiram Desai. Portfolio v2.0</p>
-            <div className="flex gap-8 font-medium">
+          <div className="pt-16 flex flex-col md:flex-row justify-between gap-12 text-sm text-muted-foreground border-t border-border/40">
+            <p className="font-light tracking-wide">© {new Date().getFullYear()} Abhiram Desai. Based in Seattle, WA.</p>
+            <div className="flex gap-12 font-bold uppercase tracking-[0.2em] text-[10px]">
               <Link href="/" className="hover:text-foreground transition-colors">Work</Link>
               <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
               <Link href="/play" className="hover:text-foreground transition-colors">Play</Link>

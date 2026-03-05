@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -14,34 +13,34 @@
       "imageHint": "ghibli san francisco"
     },
     {
-      "id": "project-mental-health",
-      "description": "AI Chatbot interface for mental health",
-      "imageUrl": "https://picsum.photos/seed/mentalhealth/800/600",
-      "imageHint": "chatbot interface"
+      "id": "space-needle",
+      "description": "Icon of Seattle Space Needle",
+      "imageUrl": "https://picsum.photos/seed/spaceneedle/100/100",
+      "imageHint": "space needle"
     },
     {
-      "id": "project-pic-to-text",
-      "description": "Optical character recognition technology",
-      "imageUrl": "https://picsum.photos/seed/pictext/800/600",
-      "imageHint": "ocr technology"
+      "id": "logo-amazon",
+      "description": "Amazon Logo",
+      "imageUrl": "https://picsum.photos/seed/amazonlogo/200/200",
+      "imageHint": "amazon logo"
     },
     {
-      "id": "project-credit-card",
-      "description": "Data visualization dashboard for credit analysis",
-      "imageUrl": "https://picsum.photos/seed/credit/800/600",
-      "imageHint": "data visualization"
+      "id": "logo-philips",
+      "description": "Philips Logo",
+      "imageUrl": "https://picsum.photos/seed/philipslogo/200/200",
+      "imageHint": "philips logo"
     },
     {
-      "id": "hobby-reading",
-      "description": "Books and coffee on a desk",
-      "imageUrl": "https://picsum.photos/seed/reading/600/400",
-      "imageHint": "books coffee"
+      "id": "logo-northeastern",
+      "description": "Northeastern University Logo",
+      "imageUrl": "https://picsum.photos/seed/neu-logo/200/200",
+      "imageHint": "university logo"
     },
     {
-      "id": "hobby-tech",
-      "description": "New gadgets and technology",
-      "imageUrl": "https://picsum.photos/seed/gadgets/600/400",
-      "imageHint": "tech gadgets"
+      "id": "logo-accenture",
+      "description": "Accenture Logo",
+      "imageUrl": "https://picsum.photos/seed/accenturelogo/200/200",
+      "imageHint": "accenture logo"
     }
   ]
 }
