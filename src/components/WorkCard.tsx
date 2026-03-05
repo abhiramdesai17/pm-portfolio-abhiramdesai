@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -18,43 +17,45 @@ interface WorkCardProps {
 
 export function WorkCard({ title, description, tags, imageUrl, slug, metrics }: WorkCardProps) {
   return (
-    <Card className="group overflow-hidden border-none bg-card hover:shadow-2xl transition-all duration-500 rounded-2xl">
-      <Link href={`/work/${slug}`} className="block">
-        <div className="relative h-[300px] overflow-hidden">
+    <div className="group space-y-6">
+      <Link href={`/work/${slug}`} className="block overflow-hidden rounded-2xl border border-border/50 bg-muted/10 transition-all hover:border-border duration-500">
+        <div className="relative h-[400px] overflow-hidden">
           <Image
             src={imageUrl}
             alt={title}
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
+            className="object-cover transition-transform duration-1000 group-hover:scale-105"
             data-ai-hint="project visual"
           />
-          <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-            <div className="bg-background/90 p-4 rounded-full text-primary transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-              <ArrowUpRight size={32} />
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+            <div className="p-4 rounded-full bg-white text-black transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+              <ArrowUpRight size={28} />
             </div>
           </div>
         </div>
-        <CardContent className="p-8">
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="bg-secondary/50 text-[10px] uppercase tracking-wider font-bold">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-          <h3 className="text-2xl font-headline font-bold mb-3 group-hover:text-accent transition-colors">
+      </Link>
+      <div className="space-y-4 px-2">
+        <div className="flex flex-wrap gap-3">
+          {tags.map((tag) => (
+            <span key={tag} className="text-[10px] uppercase tracking-[0.15em] font-semibold text-muted-foreground">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div className="flex justify-between items-start gap-4">
+          <h3 className="text-2xl font-headline font-bold tracking-tight">
             {title}
           </h3>
-          <p className="text-muted-foreground text-sm line-clamp-2 mb-4">
-            {description}
-          </p>
           {metrics && (
-            <div className="pt-4 border-t border-muted/20">
-              <span className="text-xs font-bold text-accent uppercase tracking-widest">{metrics}</span>
-            </div>
+            <span className="text-xs font-bold py-1 px-3 bg-foreground/5 rounded-full border border-border/50">
+              {metrics}
+            </span>
           )}
-        </CardContent>
-      </Link>
-    </Card>
+        </div>
+        <p className="text-muted-foreground text-base font-light leading-relaxed line-clamp-2">
+          {description}
+        </p>
+      </div>
+    </div>
   );
 }

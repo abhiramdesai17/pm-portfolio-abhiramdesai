@@ -1,7 +1,5 @@
-
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Brain, Code, Target, BarChart3, Users, Cloud } from "lucide-react";
 
@@ -16,19 +14,21 @@ const skills = [
 
 export function SkillMatrix() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       {skills.map((skill) => (
-        <div key={skill.name} className="p-6 bg-card rounded-2xl shadow-sm border hover:border-accent transition-colors group">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="p-3 bg-primary/5 rounded-xl group-hover:bg-accent/10 transition-colors">
-              <skill.icon className="text-primary group-hover:text-accent" size={24} />
+        <div key={skill.name} className="space-y-4 group">
+          <div className="flex items-center gap-4">
+            <div className="p-2 text-foreground group-hover:translate-x-1 transition-transform">
+              <skill.icon size={20} strokeWidth={1.5} />
             </div>
-            <h4 className="font-headline font-bold text-sm">{skill.name}</h4>
+            <h4 className="font-headline font-semibold text-base tracking-tight">{skill.name}</h4>
           </div>
-          <Progress value={skill.level} className="h-1.5 mb-2" />
-          <div className="flex justify-between items-center">
-            <span className="text-[10px] text-muted-foreground uppercase font-bold tracking-widest">Expertise Level</span>
-            <span className="text-xs font-bold text-accent">{skill.level}%</span>
+          <div className="space-y-2">
+            <Progress value={skill.level} className="h-[2px] bg-muted" />
+            <div className="flex justify-between items-center text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
+              <span>Expertise</span>
+              <span>{skill.level}%</span>
+            </div>
           </div>
         </div>
       ))}
