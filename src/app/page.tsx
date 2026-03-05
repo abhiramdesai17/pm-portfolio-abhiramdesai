@@ -24,14 +24,6 @@ const projects = [
     metrics: "15% Engagement Increase"
   },
   {
-    title: "Amazon Fresh B2B AI Workforce Platform",
-    description: "Defined end-to-end MVP roadmap for a $40M AI-enabled workforce planning platform across 43 fulfillment centers in North America.",
-    tags: ["AI/ML", "Operations", "B2B"],
-    imageUrl: "https://picsum.photos/seed/amazonwork/800/600",
-    slug: "amazon-workforce",
-    metrics: "~75% Reduced Decision Cycles"
-  },
-  {
     title: "Picture to Text OCR Project",
     description: "A high-precision OCR tool designed to extract structured data from complex documents using deep learning models.",
     tags: ["Computer Vision", "Python", "Deep Learning"],
@@ -49,7 +41,7 @@ const projects = [
   }
 ];
 
-export function Home() {
+export default function Home() {
   const spaceNeedle = PlaceHolderImages.find(img => img.id === "space-needle");
   const ghibliPortrait = PlaceHolderImages.find(img => img.id === "ghibli-portrait");
 
@@ -85,7 +77,7 @@ export function Home() {
                 </div>
               </div>
 
-              {/* Location Info & Relocation - Below CTA */}
+              {/* Location Info & Relocation */}
               <div className="flex flex-col gap-6 pt-4">
                 <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
                   <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full border border-white/10">
@@ -131,7 +123,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* 2. Experience Section - Horizontal Circles with Logos */}
+      {/* 2. Experience Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-20 border-y border-white/5 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-[10px] uppercase tracking-[0.5em] font-bold text-muted-foreground mb-16">Previously leading products at</p>
@@ -173,7 +165,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* 4. Core Expertise Section - At Bottom */}
+      {/* 4. Core Expertise Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-32 bg-black border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="mb-24 space-y-4">
@@ -207,5 +199,3 @@ export function Home() {
     </div>
   );
 }
-
-export default Home;

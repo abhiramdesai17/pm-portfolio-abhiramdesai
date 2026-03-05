@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -11,9 +10,9 @@ const experiences = [
     role: "Product Manager",
     period: "March 2025 – Present",
     points: [
-      "Defined and owned end-to-end MVP roadmap for a $40M Amazon Fresh B2B AI-enabled workforce planning platform.",
-      "Scaled AI-enabled platform across 2 regions and 8 business lines, reducing decision cycles by up to ~75%.",
-      "Productionized AI-powered insights platform from 0 to 1 automating reporting across 18 operational metrics."
+      "Defining and owning end-to-end MVP roadmaps for high-impact AI-enabled workforce planning solutions.",
+      "Scaling AI platforms across multiple business lines, significantly reducing operational decision cycles.",
+      "Productionizing AI-powered insights platforms from 0 to 1, automating complex operational reporting metrics."
     ]
   },
   {
@@ -102,8 +101,10 @@ export default function ResumePage() {
                 </div>
               </div>
 
-              <Button className="w-full rounded-full bg-accent hover:bg-accent/80 text-accent-foreground font-bold">
-                <Download className="mr-2" size={16} /> Download Resume
+              <Button className="w-full rounded-full bg-accent hover:bg-accent/80 text-accent-foreground font-bold" asChild>
+                <a href="/resume.pdf" download>
+                  <Download className="mr-2" size={16} /> Download Resume
+                </a>
               </Button>
             </div>
 
@@ -136,16 +137,16 @@ export default function ResumePage() {
 
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-widest text-accent mb-6 flex items-center gap-2">
-                  Projects <div className="h-px flex-1 bg-border" />
+                  Selected Projects <div className="h-px flex-1 bg-border" />
                 </h3>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-bold text-primary text-sm">Postmates Plus Parcel Delivery</h4>
-                    <p className="text-xs text-muted-foreground">Roadmap for expansion and platform feature addition.</p>
+                    <h4 className="font-bold text-primary text-sm">Mental Health AI Chatbot</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">AI-driven conversational mental health platform leveraging RAG and clinical alignment.</p>
                   </div>
                   <div>
-                    <h4 className="font-bold text-primary text-sm">Mental Health AI Chatbot</h4>
-                    <p className="text-xs text-muted-foreground">AI-driven conversational mental health platform leveraging RAG.</p>
+                    <h4 className="font-bold text-primary text-sm">Picture to Text OCR Tool</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">High-precision OCR extraction tool for complex structured document processing.</p>
                   </div>
                 </div>
               </div>

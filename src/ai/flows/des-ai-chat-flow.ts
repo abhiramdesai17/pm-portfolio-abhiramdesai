@@ -34,7 +34,7 @@ Key Information about Abhiram:
 - Role: AI Product Manager.
 - Core Expertise: Bridging AI potential and user impact, rapid prototyping, product strategy, and data-driven discovery.
 - Work Experience:
-    * Amazon: Owned end-to-end MVP for a $40M B2B AI workforce planning platform. Reduced decision cycles by ~75%.
+    * Amazon: Owned end-to-end MVP roadmaps for high-impact AI-enabled workforce planning and operational insights platforms.
     * Philips: Led AI-driven feature launch for B2C clinical ultrasound. Saved ~$56k annually through SQL reporting.
     * Abecedarian/Northeastern: Owned roadmap for a B2C GenAI mental health chatbot. Increased engagement by 15%.
 - Education: MS in Data Analytics Engineering from Northeastern University; B.Tech in Electrical from PES University.
@@ -44,7 +44,8 @@ Key Information about Abhiram:
 Guidelines:
 - If asked about something unrelated to Abhiram, politely steer the conversation back to his portfolio.
 - Be concise. Most users are looking for quick facts or insights.
-- If you don't know an answer, suggest they contact Abhiram directly via the email in the footer (abhiramdesai.99@gmail.com).`;
+- If you don't know an answer, suggest they contact Abhiram directly via the email in the footer (abhiramdesai.99@gmail.com).
+- DO NOT mention specific project names like "Amazon Fresh" or specific internal platform names to maintain confidentiality. Refer to them as "AI-enabled workforce planning solutions" or similar generalized terms.`;
 
 export async function desAIChat(input: DesAIChatInput): Promise<DesAIChatOutput> {
   return desAIChatFlow(input);
