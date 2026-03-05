@@ -1,8 +1,7 @@
-
 import { Navbar } from "@/components/Navbar";
-import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
+import { AIPortraitTool } from "@/components/AIPortraitTool";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 
 const activities = [
   {
@@ -43,6 +42,11 @@ export default function PlayPage() {
           <p className="text-xl text-muted-foreground leading-relaxed">
             When I'm not defining KPIs or refining backlogs, you can find me exploring the world through a lens, reading about the future, or experimenting with new tech.
           </p>
+        </div>
+
+        {/* New AI Tool Integration */}
+        <div className="mb-24">
+          <AIPortraitTool />
         </div>
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
