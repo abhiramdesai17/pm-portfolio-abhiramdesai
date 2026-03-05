@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { WorkCard } from "@/components/WorkCard";
 import { SkillMatrix } from "@/components/SkillMatrix";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -60,42 +60,56 @@ export default function Home() {
       {/* Hero Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-36 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-20">
-          <div className="flex-1 space-y-10">
+          <div className="flex-1 space-y-12">
             <div className="space-y-6">
-              <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground animate-in fade-in slide-in-from-left-4 duration-500">
-                {spaceNeedle?.imageUrl && (
-                  <div className="relative w-6 h-6 rounded-full overflow-hidden border border-border bg-background">
-                    <Image 
-                      src={spaceNeedle.imageUrl} 
-                      alt="Seattle" 
-                      fill 
-                      className="object-cover"
-                      data-ai-hint="space needle"
-                    />
-                  </div>
-                )}
-                <span>Based in Seattle</span>
-                <span className="w-1 h-1 rounded-full bg-border" />
-                <span className="text-foreground">Open to relocation</span>
-              </div>
               <h1 className="text-6xl md:text-8xl font-headline font-bold tracking-tight text-foreground leading-[1.05]">
                 Bridging AI Potential and User Impact.
               </h1>
+              <p className="text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light">
+                Hi, I'm Abhiram Desai. An AI Product Manager specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
+              </p>
             </div>
-            <p className="text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light">
-              Hi, I'm Abhiram Desai. An AI Product Manager specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
-            </p>
-            <div className="flex flex-wrap gap-8 items-center pt-4">
-              <Button asChild size="lg" className="rounded-full h-14 px-10 text-lg font-bold transition-all">
-                <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={20} /></Link>
-              </Button>
-              <div className="flex items-center gap-8">
-                <Link href="https://linkedin.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-all">
-                  <Linkedin size={24} />
-                </Link>
-                <Link href="mailto:abhiramdesai.99@gmail.com" className="text-muted-foreground hover:text-foreground transition-all">
-                  <Mail size={24} />
-                </Link>
+            
+            <div className="space-y-10">
+              <div className="flex flex-wrap gap-8 items-center">
+                <Button asChild size="lg" className="rounded-full h-14 px-10 text-lg font-bold transition-all bg-foreground text-background hover:bg-foreground/90">
+                  <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={20} /></Link>
+                </Button>
+                <div className="flex items-center gap-6">
+                  <Link href="https://linkedin.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-all">
+                    <Linkedin size={24} />
+                  </Link>
+                  <Link href="mailto:abhiramdesai.99@gmail.com" className="text-muted-foreground hover:text-foreground transition-all">
+                    <Mail size={24} />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Location Info - Moved below CTA */}
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/80">
+                  {spaceNeedle?.imageUrl && (
+                    <div className="relative w-8 h-8 rounded-full overflow-hidden border border-border bg-background shadow-sm">
+                      <Image 
+                        src={spaceNeedle.imageUrl} 
+                        alt="Seattle" 
+                        fill 
+                        className="object-cover"
+                        data-ai-hint="space needle"
+                      />
+                    </div>
+                  )}
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-2">
+                      <MapPin size={10} className="text-foreground" />
+                      <span>Based in Seattle</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-border" />
+                      <span className="text-foreground">Open to relocation</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -117,7 +131,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Experience Section - Logos */}
       <section className="px-4 sm:px-6 lg:px-8 py-20 border-y border-border/40 bg-muted/5">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-[10px] uppercase tracking-[0.4em] font-bold text-muted-foreground mb-16">Previously leading products at</p>
@@ -125,8 +139,8 @@ export default function Home() {
             {experiences.map((exp) => {
               const logo = PlaceHolderImages.find(img => img.id === exp.id);
               return (
-                <div key={exp.name} className="group flex flex-col items-center gap-4 transition-all">
-                  <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full border border-border bg-background p-6 shadow-sm transition-all overflow-hidden flex items-center justify-center">
+                <div key={exp.name} className="group flex flex-col items-center gap-4">
+                  <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full border border-border bg-background p-6 shadow-sm transition-all overflow-hidden flex items-center justify-center hover:border-foreground/20">
                     {logo?.imageUrl && (
                       <Image 
                         src={logo.imageUrl} 
@@ -147,11 +161,9 @@ export default function Home() {
 
       {/* Work Section */}
       <section id="work" className="px-4 sm:px-6 lg:px-8 py-32 max-w-7xl mx-auto">
-        <div className="flex justify-between items-end mb-24">
-          <div className="space-y-4">
-            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground">Case Studies</span>
-            <h2 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter">Selected Work</h2>
-          </div>
+        <div className="mb-24">
+          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground">Case Studies</span>
+          <h2 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter mt-4">Selected Work</h2>
         </div>
         
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-24">
@@ -161,12 +173,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Skills Section - Moved to bottom */}
       <section className="px-4 sm:px-6 lg:px-8 py-32 bg-muted/10 border-t border-border/40">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-20 space-y-4">
+          <div className="mb-20">
              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground">Capabilities</span>
-            <h2 className="text-5xl font-headline font-bold tracking-tighter">Core Expertise</h2>
+            <h2 className="text-5xl font-headline font-bold tracking-tighter mt-4">Core Expertise</h2>
           </div>
           <SkillMatrix />
         </div>
