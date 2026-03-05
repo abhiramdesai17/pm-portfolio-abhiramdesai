@@ -15,45 +15,46 @@ interface WorkCardProps {
 
 export function WorkCard({ title, description, tags, imageUrl, slug, metrics }: WorkCardProps) {
   return (
-    <div className="group space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-      <Link href={`/work/${slug}`} className="block overflow-hidden rounded-[2rem] border border-border/30 bg-muted/5 transition-all hover:border-foreground/20 duration-700">
-        <div className="relative h-[450px] overflow-hidden">
+    <div className="group space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
+      <Link href={`/work/${slug}`} className="block overflow-hidden rounded-[2.5rem] border border-border/20 bg-card transition-all duration-700 hover:border-foreground/20 hover:shadow-2xl hover:shadow-foreground/5">
+        <div className="relative h-[500px] overflow-hidden">
           {imageUrl && (
             <Image
               src={imageUrl}
               alt={title}
               fill
-              className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110 filter saturate-[0.8] grayscale hover:grayscale-0"
+              className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105 grayscale group-hover:grayscale-0 saturate-[1.2]"
               data-ai-hint="project visual"
             />
           )}
-          <div className="absolute inset-0 bg-background/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center backdrop-blur-[2px]">
-            <div className="p-6 rounded-full bg-foreground text-background transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700 shadow-2xl">
-              <ArrowUpRight size={32} />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60" />
+          <div className="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center backdrop-blur-[4px]">
+            <div className="p-8 rounded-full bg-foreground text-background transform translate-y-12 group-hover:translate-y-0 transition-transform duration-700 shadow-2xl">
+              <ArrowUpRight size={40} />
             </div>
           </div>
         </div>
       </Link>
-      <div className="space-y-6 px-4">
-        <div className="flex flex-wrap gap-4">
+      <div className="space-y-8 px-2">
+        <div className="flex flex-wrap gap-6">
           {tags.map((tag) => (
-            <span key={tag} className="text-[9px] uppercase tracking-[0.4em] font-bold text-muted-foreground/80">
+            <span key={tag} className="text-[10px] uppercase tracking-[0.4em] font-bold text-muted-foreground">
               {tag}
             </span>
           ))}
         </div>
-        <div className="space-y-3">
-          <div className="flex justify-between items-start gap-4">
-            <h3 className="text-3xl font-headline font-bold tracking-tighter leading-tight">
+        <div className="space-y-4">
+          <div className="flex justify-between items-start gap-8">
+            <h3 className="text-4xl font-headline font-bold tracking-tighter leading-none text-balance">
               {title}
             </h3>
             {metrics && (
-              <span className="text-[10px] font-bold py-1.5 px-4 bg-muted border border-border/50 rounded-full whitespace-nowrap tracking-wider">
+              <span className="text-[10px] font-bold py-2 px-5 bg-foreground text-background rounded-full whitespace-nowrap tracking-wider shadow-lg">
                 {metrics}
               </span>
             )}
           </div>
-          <p className="text-muted-foreground text-lg font-light leading-relaxed line-clamp-2 max-w-xl">
+          <p className="text-muted-foreground text-xl font-light leading-relaxed line-clamp-2 max-w-2xl">
             {description}
           </p>
         </div>
