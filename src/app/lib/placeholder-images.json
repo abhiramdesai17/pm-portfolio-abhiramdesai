@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -21,25 +22,25 @@
     {
       "id": "logo-amazon",
       "description": "Amazon Logo",
-      "imageUrl": "https://picsum.photos/seed/amazonlogo/200/200",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
       "imageHint": "amazon logo"
     },
     {
       "id": "logo-philips",
       "description": "Philips Logo",
-      "imageUrl": "https://picsum.photos/seed/philipslogo/200/200",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Philips_logo_new.svg",
       "imageHint": "philips logo"
     },
     {
       "id": "logo-northeastern",
       "description": "Northeastern University Logo",
-      "imageUrl": "https://picsum.photos/seed/neu-logo/200/200",
-      "imageHint": "university logo"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Northeastern_wordmark.svg",
+      "imageHint": "northeastern university logo"
     },
     {
       "id": "logo-accenture",
       "description": "Accenture Logo",
-      "imageUrl": "https://picsum.photos/seed/accenturelogo/200/200",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
       "imageHint": "accenture logo"
     }
   ]
