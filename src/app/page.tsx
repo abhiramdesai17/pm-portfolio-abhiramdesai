@@ -209,27 +209,19 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-16">
             <div className="space-y-12">
               <h2 className="text-5xl md:text-8xl font-headline font-bold tracking-tight max-w-2xl leading-[0.9] text-balance">Let's build the future together.</h2>
-              
-              {/* LinkedIn Widget Link */}
+            </div>
+            <div className="flex flex-col items-center md:items-end gap-6">
+              <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-white hover:bg-white hover:text-black transition-all px-12 h-20 text-xl font-bold">
+                <a href="mailto:abhiramdesai.99@gmail.com">Get in Touch</a>
+              </Button>
               <Link 
                 href="https://linkedin.com/in/abhiramdesai" 
                 target="_blank"
-                className="inline-flex items-center gap-6 p-6 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-all group shadow-2xl"
+                className="p-3 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 transition-all hover:scale-110 text-muted-foreground hover:text-white shadow-xl"
               >
-                <div className="bg-[#0077B5] p-4 rounded-2xl">
-                  <Linkedin size={32} className="text-white" />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground mb-1">Connect on LinkedIn</p>
-                  <p className="text-xl font-headline font-bold flex items-center gap-2">
-                    Abhiram Desai <ExternalLink size={16} className="opacity-40 group-hover:opacity-100 transition-opacity" />
-                  </p>
-                </div>
+                <Linkedin size={24} />
               </Link>
             </div>
-            <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-white hover:bg-white hover:text-black transition-all px-12 h-20 text-xl font-bold">
-              <a href="mailto:abhiramdesai.99@gmail.com">Get in Touch</a>
-            </Button>
           </div>
           <div className="pt-20 flex flex-col md:flex-row justify-between gap-12 text-[11px] text-muted-foreground border-t border-white/10 uppercase font-bold tracking-[0.3em]">
             <p className="font-light">© 2026 Abhiram Desai.</p>
