@@ -71,15 +71,35 @@ export default function Home() {
       <Navbar />
       
       {/* 1. Intro Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-48 md:pb-16 max-w-7xl mx-auto">
+      <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-20 md:pt-40 md:pb-24 max-w-7xl mx-auto">
         <div className="flex flex-col items-start gap-12">
-          <h1 className="text-6xl md:text-8xl font-headline font-medium tracking-tighter text-foreground leading-[0.9] whitespace-nowrap">
+          <h1 className="text-5xl md:text-7xl font-headline font-normal tracking-tighter text-foreground leading-[0.9] whitespace-nowrap">
             Hi, I&apos;m Abhiram!
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance max-w-4xl">
             An AI Product Manager specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
           </p>
           
+          {/* Compact Experience Logos */}
+          <div className="flex items-center gap-8 md:gap-12 py-2">
+            {experiences.map((exp) => {
+              const logo = PlaceHolderImages.find(img => img.id === exp.id);
+              return (
+                <div key={exp.name} className="relative w-8 h-8 md:w-10 md:h-10 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+                  {logo?.imageUrl && (
+                    <Image 
+                      src={logo.imageUrl} 
+                      alt={exp.name} 
+                      fill 
+                      className="object-contain"
+                      data-ai-hint={`${exp.name} logo`}
+                    />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
           <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-muted-foreground text-sm md:text-base font-bold tracking-[0.2em] uppercase">
             <div className="flex items-center gap-2">
               <span>📍 SEATTLE, WA</span>
@@ -99,36 +119,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Experience Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pt-12 pb-20 border-y border-white/5 bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-center text-[10px] uppercase tracking-[0.5em] font-bold text-muted-foreground mb-16">Previously leading products at</p>
-          <div className="flex flex-nowrap justify-center items-center gap-12 md:gap-24 overflow-x-auto no-scrollbar pb-8 md:pb-0 px-4">
-            {experiences.map((exp) => {
-              const logo = PlaceHolderImages.find(img => img.id === exp.id);
-              return (
-                <div key={exp.name} className="group flex-shrink-0 flex flex-col items-center gap-6">
-                  <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full border border-white/10 bg-black p-6 shadow-2xl transition-all duration-500 overflow-hidden flex items-center justify-center hover:border-white/40 hover:scale-110">
-                    {logo?.imageUrl && (
-                      <Image 
-                        src={logo.imageUrl} 
-                        alt={exp.name} 
-                        fill 
-                        className="object-contain p-6 filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100"
-                        data-ai-hint={`${exp.name} logo`}
-                      />
-                    )}
-                  </div>
-                  <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-muted-foreground group-hover:text-white transition-colors duration-300">{exp.name}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Work Section */}
-      <section id="work" className="px-4 sm:px-6 lg:px-8 py-32 max-w-7xl mx-auto">
+      {/* 2. Work Section */}
+      <section id="work" className="px-4 sm:px-6 lg:px-8 py-32 max-w-7xl mx-auto border-t border-white/5">
         <div className="mb-24 space-y-6">
           <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-muted-foreground">Case Studies</span>
           <h2 className="text-5xl md:text-8xl font-headline font-bold tracking-tighter leading-[0.9]">
@@ -144,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Core Expertise Section */}
+      {/* 3. Core Expertise Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-32 bg-black border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="mb-24 space-y-4">
