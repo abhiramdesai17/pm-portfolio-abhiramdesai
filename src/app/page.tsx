@@ -74,24 +74,24 @@ export default function Home() {
       <section className="px-4 sm:px-6 lg:px-8 pt-32 pb-32 max-w-7xl mx-auto text-center">
         <div className="flex flex-col items-center gap-10">
           {/* Headline */}
-          <h1 className="text-7xl md:text-[9rem] font-headline font-normal tracking-tight text-foreground leading-none">
+          <h1 className="text-6xl md:text-[7rem] font-headline font-normal tracking-tight text-foreground leading-none">
             Hi, I&apos;m Abhiram!
           </h1>
 
           {/* Narrative */}
           <div className="space-y-12 flex flex-col items-center w-full">
-            <p className="text-2xl md:text-4xl text-muted-foreground leading-[1.4] font-light w-full">
+            <p className="text-xl md:text-3xl text-muted-foreground leading-[1.4] font-light w-full">
               An <span className="text-white font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
             </p>
 
             {/* Experience Group */}
             <div className="space-y-6">
-              <span className="text-xl font-medium tracking-[0.2em] text-muted-foreground">Experience</span>
+              <span className="text-base font-medium tracking-[0.2em] text-muted-foreground">Experience</span>
               <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 grayscale opacity-60">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
-                    <div key={exp.name} className="relative h-12 w-36">
+                    <div key={exp.name} className="relative h-10 w-32">
                       {logo?.imageUrl && (
                         <Image 
                           src={logo.imageUrl} 
@@ -107,9 +107,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="pt-8">
-              <Button asChild size="lg" className="rounded-full h-16 px-12 text-xl font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20">
-                <Link href="#work">View Case Studies <ArrowRight className="ml-3" size={24} /></Link>
+            <div className="pt-4">
+              <Button asChild size="lg" className="rounded-full h-14 px-10 text-lg font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20">
+                <Link href="#work">View Case Studies <ArrowRight className="ml-3" size={20} /></Link>
               </Button>
             </div>
           </div>
