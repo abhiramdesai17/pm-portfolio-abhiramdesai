@@ -71,71 +71,58 @@ export default function Home() {
       <Navbar />
       
       {/* 1. Intro Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pt-32 pb-32 max-w-7xl mx-auto">
+      <section className="px-4 sm:px-6 lg:px-8 pt-32 pb-32 max-w-5xl mx-auto">
         <div className="flex flex-col gap-16">
-          {/* Headline Row */}
-          <div className="border-b border-white/5 pb-12">
-            <h1 className="text-4xl md:text-5xl font-headline font-normal tracking-tight text-foreground">
-              Hi, I&apos;m Abhiram!
-            </h1>
-          </div>
+          {/* Headline */}
+          <h1 className="text-4xl md:text-5xl font-headline font-normal tracking-tight text-foreground">
+            Hi, I&apos;m Abhiram!
+          </h1>
 
-          {/* Content Grid */}
-          <div className="grid md:grid-cols-12 gap-16 items-start">
-            {/* Left Column: Experience Logos */}
-            <div className="md:col-span-4 space-y-10">
-              <div className="flex items-center gap-4">
-                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground whitespace-nowrap">Experience</span>
-                <div className="h-px w-full bg-white/10" />
-              </div>
-              <div className="grid grid-cols-2 gap-x-12 gap-y-10 grayscale opacity-40">
-                {experiences.map((exp) => {
-                  const logo = PlaceHolderImages.find(img => img.id === exp.id);
-                  return (
-                    <div key={exp.name} className="relative h-8 w-full">
-                      {logo?.imageUrl && (
-                        <Image 
-                          src={logo.imageUrl} 
-                          alt={exp.name} 
-                          fill 
-                          className="object-contain object-left"
-                          data-ai-hint={`${exp.name} logo`}
-                        />
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+          {/* Narrative */}
+          <div className="space-y-16">
+            <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance">
+              An <span className="text-foreground font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
+            </p>
+
+            {/* Experience Logos */}
+            <div className="flex flex-wrap items-center gap-x-12 gap-y-8 grayscale opacity-40">
+              {experiences.map((exp) => {
+                const logo = PlaceHolderImages.find(img => img.id === exp.id);
+                return (
+                  <div key={exp.name} className="relative h-6 w-24">
+                    {logo?.imageUrl && (
+                      <Image 
+                        src={logo.imageUrl} 
+                        alt={exp.name} 
+                        fill 
+                        className="object-contain object-left"
+                        data-ai-hint={`${exp.name} logo`}
+                      />
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
-            {/* Right Column: Narrative & Status */}
-            <div className="md:col-span-8 space-y-16">
-              <div className="space-y-16">
-                <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance">
-                  <span className="text-foreground font-medium">An AI Product Manager</span> specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
-                </p>
-
-                <div className="space-y-16">
-                  {/* Status Line */}
-                  <div className="flex items-center gap-6 text-muted-foreground text-[11px] font-bold uppercase tracking-[0.3em]">
-                    <div className="flex items-center gap-2">
-                      <span>📍 SEATTLE, WA</span>
-                    </div>
-                    <div className="h-px w-12 bg-white/10" />
-                    <div className="flex items-center gap-3">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                      </span>
-                      <span>OPEN TO RELOCATION</span>
-                    </div>
-                  </div>
-
-                  <Button asChild size="lg" className="rounded-full h-16 px-12 text-xl font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20 w-fit">
-                    <Link href="#work">View Case Studies <ArrowRight className="ml-3" size={24} /></Link>
-                  </Button>
+            <div className="space-y-16">
+              {/* Status Line */}
+              <div className="flex items-center gap-6 text-muted-foreground text-[11px] font-bold uppercase tracking-[0.3em]">
+                <div className="flex items-center gap-2">
+                  <span>📍 SEATTLE, WA</span>
+                </div>
+                <div className="h-px w-12 bg-white/10" />
+                <div className="flex items-center gap-3">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  <span>OPEN TO RELOCATION</span>
                 </div>
               </div>
+
+              <Button asChild size="lg" className="rounded-full h-16 px-12 text-xl font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20 w-fit">
+                <Link href="#work">View Case Studies <ArrowRight className="ml-3" size={24} /></Link>
+              </Button>
             </div>
           </div>
         </div>
