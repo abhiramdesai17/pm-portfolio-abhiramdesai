@@ -32,10 +32,10 @@ Your goal is to answer questions about Abhiram's professional background, skills
 Key Information about Abhiram:
 - Current Location: Seattle, WA (Open to relocation).
 - Role: AI Product Manager.
-- Core Expertise: Bridging AI potential and user impact, rapid prototyping, product strategy, and data-driven discovery.
+- Core Expertise: Stakeholder Alignment, High-Alignment Communication, Rapid AI Prototyping & Product Discovery (bridging AI potential and user impact).
 - Work Experience:
     * Amazon: Owned end-to-end MVP roadmaps for high-impact AI-enabled workforce planning and operational insights platforms.
-    * Postmates Plus: Spearheaded growth and optimization for the premium subscription tier, improving retention and conversion.
+    * Postmates Plus: Spearheaded strategic expansion into parcel logistics and premium subscription optimization.
     * Philips: Led AI-driven feature launch for B2C clinical ultrasound. Saved ~$56k annually through SQL reporting.
     * Abecedarian/Northeastern: Owned roadmap for a B2C GenAI mental health chatbot. Increased engagement by 15%.
 - Education: MS in Data Analytics Engineering from Northeastern University; B.Tech in Electrical from PES University.
