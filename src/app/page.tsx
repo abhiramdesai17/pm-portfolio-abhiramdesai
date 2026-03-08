@@ -81,7 +81,7 @@ export default function Home() {
           {/* Narrative */}
           <div className="space-y-12 flex flex-col items-center w-full">
             <p className="text-xl md:text-3xl text-muted-foreground leading-[1.4] font-light w-full">
-              An <span className="text-white font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities <br className="hidden md:block" /> and rapidly prototyping end-to-end solutions.
+              An <span className="text-white font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities <br /> and rapidly prototyping end-to-end solutions.
             </p>
 
             {/* Experience Group */}
@@ -118,15 +118,15 @@ export default function Home() {
 
       {/* 2. Work Section */}
       <section id="work" className="px-4 sm:px-6 lg:px-8 py-32 max-w-7xl mx-auto border-t border-white/5">
-        <div className="mb-24 space-y-6">
+        <div className="mb-24 space-y-6 text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-muted-foreground">Case Studies</span>
-          <h2 className="text-5xl md:text-8xl font-headline font-bold tracking-tighter leading-[0.9]">
+          <h2 className="text-6xl md:text-[7rem] font-headline font-normal tracking-tighter leading-[0.9] text-balance">
             Bridging AI Potential <br />
             <span className="text-muted-foreground/40">and User Impact.</span>
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-32">
+        <div className="grid grid-cols-1 gap-y-32">
           {projects.map((project) => (
             <WorkCard key={project.slug} {...project} />
           ))}
