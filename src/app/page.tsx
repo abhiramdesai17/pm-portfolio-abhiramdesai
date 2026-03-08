@@ -67,84 +67,41 @@ const projects = [
 
 export default function Home() {
   const spaceNeedle = PlaceHolderImages.find(img => img.id === "space-needle");
-  const ghibliPortrait = PlaceHolderImages.find(img => img.id === "ghibli-portrait");
 
   return (
     <div className="min-h-screen pt-20">
       <Navbar />
       
       {/* 1. Intro Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-36 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-20">
-          <div className="flex-1 space-y-12">
-            <div className="space-y-6">
-              <h1 className="text-6xl md:text-8xl font-headline font-bold tracking-tight text-foreground leading-[1.05] text-balance">
-                Bridging AI Potential and User Impact.
-              </h1>
-              <p className="text-2xl text-muted-foreground max-w-2xl leading-relaxed font-light">
-                Hi, I'm Abhiram Desai. An AI Product Manager specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
-              </p>
-            </div>
-            
-            <div className="space-y-12">
-              <div className="flex flex-col gap-8">
-                <div className="flex flex-wrap gap-8 items-center">
-                  <Button asChild size="lg" className="rounded-full h-14 px-10 text-lg font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20">
-                    <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={20} /></Link>
-                  </Button>
-                  <div className="flex items-center gap-6">
-                    <Link href="https://linkedin.com/in/abhiramdesai" target="_blank" className="text-muted-foreground hover:text-foreground transition-all">
-                      <Linkedin size={24} />
-                    </Link>
-                    <Link href="https://github.com/abhiramdesai17" target="_blank" className="text-muted-foreground hover:text-foreground transition-all">
-                      <Github size={24} />
-                    </Link>
-                    <Link href="mailto:abhiramdesai.99@gmail.com" className="text-muted-foreground hover:text-foreground transition-all">
-                      <Mail size={24} />
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Location Info & Relocation */}
-                <div className="flex items-center gap-6 text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                  <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full border border-white/10 shadow-sm">
-                    {spaceNeedle?.imageUrl && (
-                      <div className="relative w-5 h-5 rounded-full overflow-hidden border border-white/20">
-                        <Image 
-                          src={spaceNeedle.imageUrl} 
-                          alt="Seattle" 
-                          fill 
-                          className="object-cover"
-                          data-ai-hint="space needle"
-                        />
-                      </div>
-                    )}
-                    <div className="flex items-center gap-2">
-                      <MapPin size={10} className="text-foreground" />
-                      <span>Based in Seattle</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10 shadow-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>Open to relocation</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-48 max-w-7xl mx-auto">
+        <div className="flex flex-col items-start gap-12">
+          <div className="space-y-8 max-w-4xl">
+            <h1 className="text-7xl md:text-9xl font-headline font-extrabold tracking-tighter text-foreground leading-[0.9]">
+              Hi, I&apos;m Abhiram Desai.
+            </h1>
+            <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance">
+              An AI Product Manager specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
+            </p>
           </div>
           
-          <div className="hidden lg:block flex-1 w-full max-w-lg">
-            <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden transition-all duration-1000 shadow-2xl border border-white/10 group">
-              {ghibliPortrait?.imageUrl && (
-                <Image
-                  src={ghibliPortrait.imageUrl}
-                  alt="Abhiram Desai"
-                  fill
-                  className="object-cover transition-all duration-1000 group-hover:scale-105"
-                  priority
-                  data-ai-hint="ghibli illustration"
-                />
-              )}
+          <div className="flex flex-col md:flex-row md:items-center gap-10 w-full">
+            <Button asChild size="lg" className="rounded-full h-16 px-12 text-xl font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20">
+              <Link href="#work">View Case Studies <ArrowRight className="ml-3" size={24} /></Link>
+            </Button>
+
+            {/* Location & Status - Creative Text UI */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.3em] text-muted-foreground/60">
+                <MapPin size={14} className="text-foreground/40" />
+                <span>Currently in Seattle, WA</span>
+              </div>
+              <div className="flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.3em] text-foreground">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span>Active & Open to global relocation</span>
+              </div>
             </div>
           </div>
         </div>
@@ -180,9 +137,12 @@ export default function Home() {
 
       {/* 3. Work Section */}
       <section id="work" className="px-4 sm:px-6 lg:px-8 py-32 max-w-7xl mx-auto">
-        <div className="mb-24 space-y-4">
+        <div className="mb-24 space-y-6">
           <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-muted-foreground">Case Studies</span>
-          <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter">Selected Work</h2>
+          <h2 className="text-5xl md:text-8xl font-headline font-bold tracking-tighter leading-[0.9]">
+            Bridging AI Potential <br />
+            <span className="text-muted-foreground/40">and User Impact.</span>
+          </h2>
         </div>
         
         <div className="grid md:grid-cols-2 gap-x-16 gap-y-32">
@@ -208,19 +168,37 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-16">
             <div className="space-y-12">
-              <h2 className="text-5xl md:text-8xl font-headline font-bold tracking-tight max-w-2xl leading-[0.9] text-balance">Let's build the future together.</h2>
+              <h2 className="text-5xl md:text-8xl font-headline font-bold tracking-tight max-w-2xl leading-[0.9] text-balance">Let&apos;s build the future together.</h2>
             </div>
-            <div className="flex flex-col items-center md:items-end gap-6">
-              <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-white hover:bg-white hover:text-black transition-all px-12 h-20 text-xl font-bold">
-                <a href="mailto:abhiramdesai.99@gmail.com">Get in Touch</a>
-              </Button>
-              <Link 
-                href="https://linkedin.com/in/abhiramdesai" 
-                target="_blank"
-                className="p-3 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 transition-all hover:scale-110 text-muted-foreground hover:text-white shadow-xl"
-              >
-                <Linkedin size={24} />
-              </Link>
+            <div className="flex flex-col items-center md:items-end gap-8">
+              <div className="flex flex-col items-center md:items-end gap-6">
+                <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-white hover:bg-white hover:text-black transition-all px-12 h-20 text-xl font-bold">
+                  <a href="mailto:abhiramdesai.99@gmail.com">Get in Touch</a>
+                </Button>
+                {/* Social Links under Get in Touch */}
+                <div className="flex items-center gap-8">
+                  <Link 
+                    href="https://linkedin.com/in/abhiramdesai" 
+                    target="_blank"
+                    className="text-muted-foreground hover:text-white transition-all hover:scale-110"
+                  >
+                    <Linkedin size={24} />
+                  </Link>
+                  <Link 
+                    href="https://github.com/abhiramdesai17" 
+                    target="_blank"
+                    className="text-muted-foreground hover:text-white transition-all hover:scale-110"
+                  >
+                    <Github size={24} />
+                  </Link>
+                  <Link 
+                    href="mailto:abhiramdesai.99@gmail.com"
+                    className="text-muted-foreground hover:text-white transition-all hover:scale-110"
+                  >
+                    <Mail size={24} />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
           <div className="pt-20 flex flex-col md:flex-row justify-between gap-12 text-[11px] text-muted-foreground border-t border-white/10 uppercase font-bold tracking-[0.3em]">
