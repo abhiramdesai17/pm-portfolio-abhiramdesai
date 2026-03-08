@@ -194,7 +194,7 @@ export default function Home() {
             </Button>
           </div>
           <div className="pt-20 flex flex-col md:flex-row justify-between gap-12 text-[11px] text-muted-foreground border-t border-white/10 uppercase font-bold tracking-[0.3em]">
-            <p className="font-light">© {new Date().getFullYear()} Abhiram Desai. Seattle, WA.</p>
+            <p className="font-light">© 2026 Abhiram Desai.</p>
             <div className="flex flex-wrap gap-12">
               <Link href="/" className="hover:text-white transition-colors">Work</Link>
               <Link href="/about" className="hover:text-white transition-colors">About</Link>
