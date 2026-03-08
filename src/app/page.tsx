@@ -19,7 +19,7 @@ const projects = [
     title: "Postmates Plus",
     description: "Strategic expansion into parcel logistics. Spearheaded the optimization of the premium subscription tier through A/B testing and iterative feature rollouts.",
     tags: ["Product Growth", "B2C Strategy"],
-    imageUrl: "https://picsum.photos/seed/postmates/800/600",
+    imageUrl: "https://picsum.photos/seed/postmates/1200/600",
     slug: "postmates-plus",
     metrics: "22% Conversion Uplift"
   },
@@ -27,7 +27,7 @@ const projects = [
     title: "Mental Health GenAI Chatbot",
     description: "Owned product roadmap for a B2C GenAI platform. Partnered with clinical experts to translate complex requirements into measurable user engagement goals.",
     tags: ["Product Strategy", "GenAI"],
-    imageUrl: "https://picsum.photos/seed/mentalhealth/800/600",
+    imageUrl: "https://picsum.photos/seed/mentalhealth/1200/600",
     slug: "mental-health-chatbot",
     metrics: "15% Engagement Increase"
   },
@@ -35,7 +35,7 @@ const projects = [
     title: "Django Real Estate Platform",
     description: "A robust, high-performance property listing platform featuring agent-client management, advanced filtering, and secure user authentication.",
     tags: ["Python", "Django", "PostgreSQL"],
-    imageUrl: "https://picsum.photos/seed/django-re/800/600",
+    imageUrl: "https://picsum.photos/seed/django-re/1200/600",
     slug: "django-real-estate",
     metrics: "25% Query Speedup"
   },
@@ -43,7 +43,7 @@ const projects = [
     title: "Spotify ETL Data Pipeline",
     description: "End-to-end serverless data pipeline on AWS. Automating data extraction, transformation, and loading for listening habit analytics.",
     tags: ["AWS", "Data Engineering", "Python"],
-    imageUrl: "https://picsum.photos/seed/spotify-etl/800/600",
+    imageUrl: "https://picsum.photos/seed/spotify-etl/1200/600",
     slug: "spotify-etl",
     metrics: "100k+ Records Daily"
   },
@@ -51,7 +51,7 @@ const projects = [
     title: "Picture to Text OCR Project",
     description: "A high-precision OCR tool designed to extract structured data from complex documents using deep learning models.",
     tags: ["Computer Vision", "Deep Learning"],
-    imageUrl: "https://picsum.photos/seed/pictext/800/600",
+    imageUrl: "https://picsum.photos/seed/pictext/1200/600",
     slug: "pic-to-text",
     metrics: "98% Accuracy"
   },
@@ -59,7 +59,7 @@ const projects = [
     title: "Credit Card Default Prediction",
     description: "Developed predictive models to identify potential credit card defaults, improving risk assessment accuracy for financial institutions.",
     tags: ["Data Science", "Finance"],
-    imageUrl: "https://picsum.photos/seed/credit/800/600",
+    imageUrl: "https://picsum.photos/seed/credit/1200/600",
     slug: "credit-default",
     metrics: "10% Risk Reduction"
   }
@@ -86,7 +86,7 @@ export default function Home() {
 
             {/* Experience Group */}
             <div className="space-y-6">
-              <span className="text-base font-medium tracking-[0.2em] text-muted-foreground">Experience</span>
+              <span className="text-base font-medium text-muted-foreground">Experience</span>
               <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 grayscale opacity-60">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
@@ -126,7 +126,7 @@ export default function Home() {
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 gap-y-32">
+        <div className="flex flex-col gap-16">
           {projects.map((project) => (
             <WorkCard key={project.slug} {...project} />
           ))}
