@@ -79,15 +79,15 @@ export default function Home() {
           </h1>
 
           {/* Narrative */}
-          <div className="space-y-16 flex flex-col items-center">
-            <p className="text-2xl md:text-3xl text-muted-foreground leading-[1.6] font-light max-w-4xl mx-auto">
+          <div className="space-y-16 flex flex-col items-center w-full">
+            <p className="text-2xl md:text-3xl text-muted-foreground leading-[1.6] font-light w-full">
               An <span className="text-foreground font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
             </p>
 
             {/* Experience Group */}
             <div className="space-y-8">
-              <span className="text-[11px] font-bold tracking-[0.3em] text-muted-foreground/80">experience</span>
-              <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 grayscale opacity-40">
+              <span className="text-[11px] font-bold tracking-[0.3em] text-muted-foreground/80">Experience</span>
+              <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-8 grayscale opacity-40">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
