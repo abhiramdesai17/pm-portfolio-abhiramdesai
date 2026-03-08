@@ -19,7 +19,7 @@ const projects = [
     title: "Postmates Plus",
     description: "Strategic expansion into parcel logistics. Spearheaded the optimization of the premium subscription tier through A/B testing and iterative feature rollouts.",
     tags: ["Product Growth", "B2C Strategy"],
-    imageUrl: "https://picsum.photos/seed/postmates/1920/1080",
+    imageUrl: "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=2070&auto=format&fit=crop",
     slug: "postmates-plus",
     metrics: "22% Conversion Uplift"
   },
@@ -27,7 +27,7 @@ const projects = [
     title: "Mental Health GenAI Chatbot",
     description: "Owned product roadmap for a B2C GenAI platform. Partnered with clinical experts to translate complex requirements into measurable user engagement goals.",
     tags: ["Product Strategy", "GenAI"],
-    imageUrl: "https://picsum.photos/seed/mentalhealth/1920/1080",
+    imageUrl: "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=2064&auto=format&fit=crop",
     slug: "mental-health-chatbot",
     metrics: "15% Engagement Increase"
   },
@@ -35,7 +35,7 @@ const projects = [
     title: "Django Real Estate Platform",
     description: "A robust, high-performance property listing platform featuring agent-client management, advanced filtering, and secure user authentication.",
     tags: ["Python", "Django", "PostgreSQL"],
-    imageUrl: "https://picsum.photos/seed/django-re/1920/1080",
+    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop",
     slug: "django-real-estate",
     metrics: "25% Query Speedup"
   },
@@ -43,7 +43,7 @@ const projects = [
     title: "Spotify ETL Data Pipeline",
     description: "End-to-end serverless data pipeline on AWS. Automating data extraction, transformation, and loading for listening habit analytics.",
     tags: ["AWS", "Data Engineering", "Python"],
-    imageUrl: "https://picsum.photos/seed/spotify-etl/1920/1080",
+    imageUrl: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
     slug: "spotify-etl",
     metrics: "100k+ Records Daily"
   },
@@ -51,7 +51,7 @@ const projects = [
     title: "Picture to Text OCR Project",
     description: "A high-precision OCR tool designed to extract structured data from complex documents using deep learning models.",
     tags: ["Computer Vision", "Deep Learning"],
-    imageUrl: "https://picsum.photos/seed/pictext/1920/1080",
+    imageUrl: "https://images.unsplash.com/photo-1568027762-72036f2619d7?q=80&w=2070&auto=format&fit=crop",
     slug: "pic-to-text",
     metrics: "98% Accuracy"
   },
@@ -59,7 +59,7 @@ const projects = [
     title: "Credit Card Default Prediction",
     description: "Developed predictive models to identify potential credit card defaults, improving risk assessment accuracy for financial institutions.",
     tags: ["Data Science", "Finance"],
-    imageUrl: "https://picsum.photos/seed/credit/1920/1080",
+    imageUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
     slug: "credit-default",
     metrics: "10% Risk Reduction"
   }
@@ -73,12 +73,12 @@ export default function Home() {
       {/* 1. Intro Section */}
       <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-24 max-w-full mx-auto text-center">
         <div className="flex flex-col items-center gap-6">
-          {/* Headline - Single line, reduced size */}
+          {/* Headline - Single line, balanced size */}
           <h1 className="text-5xl md:text-[7rem] font-headline font-normal tracking-tight text-foreground leading-none">
             Hi, I&apos;m Abhiram!
           </h1>
 
-          {/* Narrative - Split after 'opportunities' */}
+          {/* Narrative - Split exactly after 'opportunities' */}
           <div className="space-y-12 flex flex-col items-center w-full">
             <p className="text-xl md:text-3xl text-muted-foreground leading-relaxed font-light w-full">
               An <span className="text-white font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities <br /> 
@@ -97,7 +97,7 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative flex h-20 w-20 items-center justify-center rounded-full bg-white p-4 shadow-2xl transition-all hover:scale-110 active:scale-95 ring-1 ring-white/10"
+                      className="group relative flex h-20 w-20 items-center justify-center rounded-full bg-zinc-900/50 p-4 shadow-xl transition-all hover:scale-110 active:scale-95 ring-1 ring-white/10 hover:ring-white/30 backdrop-blur-sm"
                     >
                       {logo?.imageUrl && (
                         <Image 
@@ -134,7 +134,7 @@ export default function Home() {
           </h2>
         </div>
         
-        {/* Project Grid - Single column, full width */}
+        {/* Project Grid - Single column, full width stretching */}
         <div className="grid grid-cols-1 gap-12 max-w-7xl mx-auto">
           {projects.map((project) => (
             <WorkCard key={project.slug} {...project} />
