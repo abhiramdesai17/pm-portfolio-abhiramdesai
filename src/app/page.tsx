@@ -74,7 +74,7 @@ export default function Home() {
       <section className="px-4 sm:px-6 lg:px-8 pt-32 pb-32 max-w-7xl mx-auto text-center">
         <div className="flex flex-col items-center gap-10">
           {/* Headline */}
-          <h1 className="text-8xl md:text-[11rem] font-headline font-normal tracking-tight text-foreground leading-none">
+          <h1 className="text-7xl md:text-[9rem] font-headline font-normal tracking-tight text-foreground leading-none">
             Hi, I&apos;m Abhiram!
           </h1>
 
@@ -86,7 +86,7 @@ export default function Home() {
 
             {/* Experience Group */}
             <div className="space-y-6">
-              <span className="text-xl font-medium tracking-[0.2em] text-foreground">Experience</span>
+              <span className="text-xl font-medium tracking-[0.2em] text-muted-foreground">Experience</span>
               <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 grayscale opacity-60">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
