@@ -73,7 +73,7 @@ export default function Home() {
       {/* 1. Intro Section */}
       <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-48 md:pb-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-start gap-12">
-          <h1 className="text-7xl md:text-9xl font-headline font-extrabold tracking-tighter text-foreground leading-[0.9] whitespace-nowrap">
+          <h1 className="text-6xl md:text-8xl font-headline font-medium tracking-tighter text-foreground leading-[0.9] whitespace-nowrap">
             Hi, I&apos;m Abhiram!
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance max-w-4xl">
@@ -89,7 +89,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span>OPEN TO GLOBAL RELOCATION</span>
+              <span>OPEN TO RELOCATION</span>
             </div>
           </div>
 
