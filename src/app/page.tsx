@@ -72,23 +72,23 @@ export default function Home() {
       
       {/* 1. Intro Section */}
       <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-24 max-w-full mx-auto text-center">
-        <div className="flex flex-col items-center gap-4">
-          {/* Headline - Single line, unbolded, reduced size */}
+        <div className="flex flex-col items-center gap-6">
+          {/* Headline - Single line, reduced size */}
           <h1 className="text-5xl md:text-[7rem] font-headline font-normal tracking-tight text-foreground leading-none">
             Hi, I&apos;m Abhiram!
           </h1>
 
-          {/* Narrative - Split after 'opportunities', reduced size, no side padding */}
-          <div className="space-y-8 flex flex-col items-center w-full">
-            <p className="text-lg md:text-3xl text-muted-foreground leading-relaxed font-light w-full">
+          {/* Narrative - Split after 'opportunities' */}
+          <div className="space-y-12 flex flex-col items-center w-full">
+            <p className="text-xl md:text-3xl text-muted-foreground leading-relaxed font-light w-full">
               An <span className="text-white font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities <br /> 
               and rapidly prototyping end-to-end solutions.
             </p>
 
             {/* Experience Group */}
-            <div className="space-y-4 pt-4">
-              <span className="text-lg font-medium text-muted-foreground">Experience</span>
-              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 grayscale hover:grayscale-0 transition-all duration-700 opacity-80 hover:opacity-100">
+            <div className="space-y-6 pt-4 flex flex-col items-center">
+              <span className="text-2xl font-medium text-muted-foreground">Experience</span>
+              <div className="flex flex-wrap items-center justify-center gap-6">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -97,13 +97,14 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="relative h-12 w-32 transition-transform hover:scale-105 active:scale-95"
+                      className="group relative flex h-20 w-20 items-center justify-center rounded-full bg-white p-4 shadow-2xl transition-all hover:scale-110 active:scale-95 ring-1 ring-white/10"
                     >
                       {logo?.imageUrl && (
                         <Image 
                           src={logo.imageUrl} 
                           alt={exp.name} 
-                          fill 
+                          width={48} 
+                          height={48} 
                           className="object-contain"
                           data-ai-hint={`${exp.name} logo`}
                         />
@@ -114,9 +115,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="pt-2">
-              <Button asChild className="rounded-full h-10 px-6 text-sm font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-xl shadow-foreground/10">
-                <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={16} /></Link>
+            <div className="pt-8">
+              <Button asChild className="rounded-full h-12 px-8 text-base font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-xl shadow-foreground/10">
+                <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={18} /></Link>
               </Button>
             </div>
           </div>
@@ -124,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* 2. Work Section */}
-      <section id="work" className="px-4 sm:px-6 lg:px-8 py-24 max-w-7xl mx-auto border-t border-white/5">
+      <section id="work" className="px-4 sm:px-6 lg:px-8 py-24 max-w-full mx-auto border-t border-white/5">
         <div className="mb-20 space-y-6 text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-muted-foreground">Case Studies</span>
           <h2 className="text-5xl md:text-[7rem] font-headline font-normal tracking-tighter leading-none text-balance">
@@ -134,7 +135,7 @@ export default function Home() {
         </div>
         
         {/* Project Grid - Single column, full width */}
-        <div className="grid grid-cols-1 gap-12">
+        <div className="grid grid-cols-1 gap-12 max-w-7xl mx-auto">
           {projects.map((project) => (
             <WorkCard key={project.slug} {...project} />
           ))}
