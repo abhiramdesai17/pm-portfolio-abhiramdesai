@@ -16,8 +16,16 @@ const experiences = [
 
 const projects = [
   {
+    title: "Postmates Plus",
+    description: "Spearheaded the optimization of the premium subscription tier, focusing on user lifecycle management and conversion rate optimization through A/B testing and iterative feature rollouts.",
+    tags: ["Product Growth", "B2C", "Subscription Strategy"],
+    imageUrl: "https://picsum.photos/seed/postmates/800/600",
+    slug: "postmates-plus",
+    metrics: "22% Conversion Uplift"
+  },
+  {
     title: "Mental Health GenAI Chatbot",
-    description: "Owned product roadmap from ideation to execution for a B2C GenAI-powered mental health chatbot. Partnered with clinical experts to translate requirements into measurable goals.",
+    description: "Owned product roadmap from ideation to execution for a B2C GenAI-powered mental health platform. Partnered with clinical experts to translate complex requirements into measurable user engagement goals.",
     tags: ["Product Strategy", "GenAI", "Healthcare"],
     imageUrl: "https://picsum.photos/seed/mentalhealth/800/600",
     slug: "mental-health-chatbot",
@@ -25,7 +33,7 @@ const projects = [
   },
   {
     title: "Picture to Text OCR Project",
-    description: "A high-precision OCR tool designed to extract structured data from complex documents using deep learning models.",
+    description: "A high-precision OCR tool designed to extract structured data from complex documents using deep learning models, streamlining document processing workflows.",
     tags: ["Computer Vision", "Python", "Deep Learning"],
     imageUrl: "https://picsum.photos/seed/pictext/800/600",
     slug: "pic-to-text",
@@ -33,7 +41,7 @@ const projects = [
   },
   {
     title: "Credit Card Default Prediction",
-    description: "Developed predictive models to identify potential credit card defaults, improving risk assessment accuracy for financial institutions.",
+    description: "Developed predictive models to identify potential credit card defaults, improving risk assessment accuracy for financial institutions through machine learning.",
     tags: ["Data Science", "Finance", "Predictive Modeling"],
     imageUrl: "https://picsum.photos/seed/credit/800/600",
     slug: "credit-default",
