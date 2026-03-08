@@ -1,15 +1,14 @@
 "use client";
 
-import { Progress } from "@/components/ui/progress";
-import { Brain, Target, BarChart3, Users, Zap, MessageSquare } from "lucide-react";
+import { Target, Zap, MessageSquare, Code, BarChart3, Brain } from "lucide-react";
 
 const skills = [
   { name: "Stakeholder Alignment", level: 95, icon: Target },
   { name: "High-Alignment Communication", level: 90, icon: MessageSquare },
   { name: "Rapid AI Prototyping & Discovery", level: 95, icon: Zap },
+  { name: "Python & AI/ML Integration", level: 90, icon: Code },
+  { name: "Data Analytics & SQL", level: 85, icon: BarChart3 },
   { name: "Product Strategy & Roadmap", level: 90, icon: Brain },
-  { name: "Data-Driven Decision Making", level: 85, icon: BarChart3 },
-  { name: "Agile & Scrum Leadership", level: 95, icon: Users },
 ];
 
 export function SkillMatrix() {
