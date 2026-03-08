@@ -81,7 +81,7 @@ export default function Home() {
           {/* Narrative */}
           <div className="space-y-12 flex flex-col items-center w-full">
             <p className="text-xl md:text-3xl text-muted-foreground leading-[1.4] font-light w-full">
-              An <span className="text-white font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
+              An <span className="text-white font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities <br className="hidden md:block" /> and rapidly prototyping end-to-end solutions.
             </p>
 
             {/* Experience Group */}
