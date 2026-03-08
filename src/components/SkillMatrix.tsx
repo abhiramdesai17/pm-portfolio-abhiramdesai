@@ -13,13 +13,13 @@ import {
 } from "lucide-react";
 
 const skills = [
-  { name: "Stakeholder Alignment", level: 95, icon: Target },
-  { name: "High-Alignment Communication", level: 90, icon: MessageSquare },
-  { name: "Rapid AI Prototyping & Discovery", level: 95, icon: Zap },
-  { name: "Product Strategy & Roadmap", level: 90, icon: Brain },
-  { name: "Data Analytics & SQL", level: 85, icon: BarChart3 },
+  { name: "Product Strategy & Roadmap", level: 95, icon: Brain },
+  { name: "Rapid AI Prototyping & Discovery", level: 98, icon: Zap },
+  { name: "Python, LLM & AI/ML Integration", level: 90, icon: Code },
   { name: "Agile & Scrum Leadership", level: 95, icon: Users },
-  { name: "Python & AI/ML Integration", level: 90, icon: Code },
+  { name: "Cross-functional Stakeholder Alignment", level: 95, icon: Target },
+  { name: "High-alignment Communication", level: 90, icon: MessageSquare },
+  { name: "Data Analytics & SQL", level: 85, icon: BarChart3 },
   { name: "Cloud Infrastructure (AWS/Azure)", level: 80, icon: Cloud },
   { name: "B2C/B2B Growth Strategy", level: 85, icon: TrendingUp },
 ];
