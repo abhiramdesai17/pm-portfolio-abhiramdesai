@@ -71,23 +71,23 @@ export default function Home() {
       <Navbar />
       
       {/* 1. Intro Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pt-32 pb-32 max-w-5xl mx-auto">
-        <div className="flex flex-col gap-12">
+      <section className="px-4 sm:px-6 lg:px-8 pt-32 pb-32 max-w-5xl mx-auto text-center">
+        <div className="flex flex-col items-center gap-20">
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl font-headline font-normal tracking-tight text-foreground">
+          <h1 className="text-6xl md:text-8xl font-headline font-normal tracking-tight text-foreground">
             Hi, I&apos;m Abhiram!
           </h1>
 
           {/* Narrative */}
-          <div className="space-y-12">
-            <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance">
+          <div className="space-y-16 flex flex-col items-center">
+            <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance max-w-3xl">
               An <span className="text-foreground font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
             </p>
 
             {/* Experience Group */}
             <div className="space-y-6">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground/60">Experience</span>
-              <div className="flex flex-wrap items-center gap-x-12 gap-y-8 grayscale opacity-40">
+              <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 grayscale opacity-40">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -97,7 +97,7 @@ export default function Home() {
                           src={logo.imageUrl} 
                           alt={exp.name} 
                           fill 
-                          className="object-contain object-left"
+                          className="object-contain"
                           data-ai-hint={`${exp.name} logo`}
                         />
                       )}
@@ -107,8 +107,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="pt-4">
-              <Button asChild size="lg" className="rounded-full h-16 px-12 text-xl font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20 w-fit">
+            <div className="pt-8">
+              <Button asChild size="lg" className="rounded-full h-16 px-12 text-xl font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20">
                 <Link href="#work">View Case Studies <ArrowRight className="ml-3" size={24} /></Link>
               </Button>
             </div>
@@ -152,12 +152,12 @@ export default function Home() {
               <h2 className="text-5xl md:text-8xl font-headline font-bold tracking-tight max-w-2xl leading-[0.9] text-balance">Let&apos;s build the future together.</h2>
             </div>
             <div className="flex flex-col items-center md:items-end gap-8">
-              <div className="flex flex-col items-center md:items-end gap-6">
-                <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-white hover:bg-white hover:text-black transition-all px-12 h-20 text-xl font-bold">
+              <div className="flex flex-col items-center md:items-end gap-6 w-full md:w-auto">
+                <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-white hover:bg-white hover:text-black transition-all px-12 h-20 text-xl font-bold w-full md:w-auto">
                   <a href="mailto:abhiramdesai.99@gmail.com">Get in Touch</a>
                 </Button>
                 {/* Social Links under Get in Touch */}
-                <div className="flex items-center gap-8">
+                <div className="flex items-center gap-8 justify-center md:justify-end">
                   <Link 
                     href="https://linkedin.com/in/abhiramdesai" 
                     target="_blank"
