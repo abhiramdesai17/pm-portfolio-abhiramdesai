@@ -17,32 +17,48 @@ const experiences = [
 const projects = [
   {
     title: "Postmates Plus",
-    description: "Spearheaded the optimization of the premium subscription tier, focusing on user lifecycle management and conversion rate optimization through A/B testing and iterative feature rollouts.",
-    tags: ["Product Growth", "B2C", "Subscription Strategy"],
+    description: "Strategic expansion into parcel logistics. Spearheaded the optimization of the premium subscription tier through A/B testing and iterative feature rollouts.",
+    tags: ["Product Growth", "B2C Strategy"],
     imageUrl: "https://picsum.photos/seed/postmates/800/600",
     slug: "postmates-plus",
     metrics: "22% Conversion Uplift"
   },
   {
     title: "Mental Health GenAI Chatbot",
-    description: "Owned product roadmap from ideation to execution for a B2C GenAI-powered mental health platform. Partnered with clinical experts to translate complex requirements into measurable user engagement goals.",
-    tags: ["Product Strategy", "GenAI", "Healthcare"],
+    description: "Owned product roadmap for a B2C GenAI platform. Partnered with clinical experts to translate complex requirements into measurable user engagement goals.",
+    tags: ["Product Strategy", "GenAI"],
     imageUrl: "https://picsum.photos/seed/mentalhealth/800/600",
     slug: "mental-health-chatbot",
     metrics: "15% Engagement Increase"
   },
   {
+    title: "Django Real Estate Platform",
+    description: "A robust, high-performance property listing platform featuring agent-client management, advanced filtering, and secure user authentication.",
+    tags: ["Python", "Django", "PostgreSQL"],
+    imageUrl: "https://picsum.photos/seed/django-re/800/600",
+    slug: "django-real-estate",
+    metrics: "25% Query Speedup"
+  },
+  {
+    title: "Spotify ETL Data Pipeline",
+    description: "End-to-end serverless data pipeline on AWS. Automating data extraction, transformation, and loading for listening habit analytics.",
+    tags: ["AWS", "Data Engineering", "Python"],
+    imageUrl: "https://picsum.photos/seed/spotify-etl/800/600",
+    slug: "spotify-etl",
+    metrics: "100k+ Records Daily"
+  },
+  {
     title: "Picture to Text OCR Project",
-    description: "A high-precision OCR tool designed to extract structured data from complex documents using deep learning models, streamlining document processing workflows.",
-    tags: ["Computer Vision", "Python", "Deep Learning"],
+    description: "A high-precision OCR tool designed to extract structured data from complex documents using deep learning models.",
+    tags: ["Computer Vision", "Deep Learning"],
     imageUrl: "https://picsum.photos/seed/pictext/800/600",
     slug: "pic-to-text",
     metrics: "98% Accuracy"
   },
   {
     title: "Credit Card Default Prediction",
-    description: "Developed predictive models to identify potential credit card defaults, improving risk assessment accuracy for financial institutions through machine learning.",
-    tags: ["Data Science", "Finance", "Predictive Modeling"],
+    description: "Developed predictive models to identify potential credit card defaults, improving risk assessment accuracy for financial institutions.",
+    tags: ["Data Science", "Finance"],
     imageUrl: "https://picsum.photos/seed/credit/800/600",
     slug: "credit-default",
     metrics: "10% Risk Reduction"
@@ -71,26 +87,26 @@ export default function Home() {
             </div>
             
             <div className="space-y-12">
-              <div className="flex flex-wrap gap-8 items-center">
-                <Button asChild size="lg" className="rounded-full h-14 px-10 text-lg font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20">
-                  <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={20} /></Link>
-                </Button>
-                <div className="flex items-center gap-6">
-                  <Link href="https://linkedin.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-all">
-                    <Linkedin size={24} />
-                  </Link>
-                  <Link href="mailto:abhiramdesai.99@gmail.com" className="text-muted-foreground hover:text-foreground transition-all">
-                    <Mail size={24} />
-                  </Link>
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-wrap gap-8 items-center">
+                  <Button asChild size="lg" className="rounded-full h-14 px-10 text-lg font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20">
+                    <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={20} /></Link>
+                  </Button>
+                  <div className="flex items-center gap-6">
+                    <Link href="https://linkedin.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-all">
+                      <Linkedin size={24} />
+                    </Link>
+                    <Link href="mailto:abhiramdesai.99@gmail.com" className="text-muted-foreground hover:text-foreground transition-all">
+                      <Mail size={24} />
+                    </Link>
+                  </div>
                 </div>
-              </div>
 
-              {/* Location Info & Relocation */}
-              <div className="flex flex-col gap-6 pt-4">
-                <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                  <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                {/* Location Info & Relocation */}
+                <div className="flex items-center gap-6 text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                  <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full border border-white/10 shadow-sm">
                     {spaceNeedle?.imageUrl && (
-                      <div className="relative w-6 h-6 rounded-full overflow-hidden border border-white/20 shadow-sm">
+                      <div className="relative w-5 h-5 rounded-full overflow-hidden border border-white/20">
                         <Image 
                           src={spaceNeedle.imageUrl} 
                           alt="Seattle" 
@@ -101,11 +117,11 @@ export default function Home() {
                       </div>
                     )}
                     <div className="flex items-center gap-2">
-                      <MapPin size={12} className="text-foreground" />
+                      <MapPin size={10} className="text-foreground" />
                       <span>Based in Seattle</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10 shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span>Open to relocation</span>
                   </div>
