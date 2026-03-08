@@ -86,12 +86,12 @@ export default function Home() {
 
             {/* Experience Group */}
             <div className="space-y-8">
-              <span className="text-[11px] font-bold tracking-[0.3em] text-muted-foreground/80">Experience</span>
+              <span className="text-sm font-bold tracking-[0.3em] text-muted-foreground/80">Experience</span>
               <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-8 grayscale opacity-40">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
-                    <div key={exp.name} className="relative h-6 w-24">
+                    <div key={exp.name} className="relative h-8 w-28">
                       {logo?.imageUrl && (
                         <Image 
                           src={logo.imageUrl} 
