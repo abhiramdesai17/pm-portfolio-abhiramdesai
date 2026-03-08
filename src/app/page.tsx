@@ -71,41 +71,36 @@ export default function Home() {
       <Navbar />
       
       {/* 1. Intro Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-48 max-w-7xl mx-auto">
-        <div className="flex flex-col items-start gap-10">
-          <div className="space-y-8 max-w-4xl">
-            <h1 className="text-7xl md:text-9xl font-headline font-extrabold tracking-tighter text-foreground leading-[0.9]">
-              Hi, I&apos;m Abhiram.
-            </h1>
-            <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance">
-              An AI Product Manager specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
-            </p>
-          </div>
+      <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-48 md:pb-16 max-w-7xl mx-auto">
+        <div className="flex flex-col items-start gap-12">
+          <h1 className="text-7xl md:text-9xl font-headline font-extrabold tracking-tighter text-foreground leading-[0.9] whitespace-nowrap">
+            Hi, I&apos;m Abhiram.
+          </h1>
+          <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance max-w-4xl">
+            An AI Product Manager specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
+          </p>
           
-          <div className="flex flex-col gap-8 w-full">
-            {/* Location & Status Line */}
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-muted-foreground text-sm md:text-base font-medium">
-              <div className="flex items-center gap-2">
-                <span>📍 Seattle, WA</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                <span>Open to global relocation</span>
-              </div>
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-muted-foreground text-sm md:text-base font-bold tracking-[0.2em] uppercase">
+            <div className="flex items-center gap-2">
+              <span>📍 SEATTLE, WA</span>
             </div>
-
-            <Button asChild size="lg" className="rounded-full h-16 px-12 text-xl font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20 w-fit">
-              <Link href="#work">View Case Studies <ArrowRight className="ml-3" size={24} /></Link>
-            </Button>
+            <div className="flex items-center gap-3">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span>OPEN TO GLOBAL RELOCATION</span>
+            </div>
           </div>
+
+          <Button asChild size="lg" className="rounded-full h-16 px-12 text-xl font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-2xl shadow-foreground/20 w-fit">
+            <Link href="#work">View Case Studies <ArrowRight className="ml-3" size={24} /></Link>
+          </Button>
         </div>
       </section>
 
       {/* 2. Experience Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-20 border-y border-white/5 bg-white/[0.02]">
+      <section className="px-4 sm:px-6 lg:px-8 pt-12 pb-20 border-y border-white/5 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-[10px] uppercase tracking-[0.5em] font-bold text-muted-foreground mb-16">Previously leading products at</p>
           <div className="flex flex-nowrap justify-center items-center gap-12 md:gap-24 overflow-x-auto no-scrollbar pb-8 md:pb-0 px-4">
