@@ -73,7 +73,7 @@ export default function Home() {
       
       {/* 1. Intro Section */}
       <section className="px-4 sm:px-6 lg:px-8 pt-32 pb-32 max-w-7xl mx-auto text-center">
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-6">
           {/* Headline */}
           <h1 className="text-7xl md:text-[7rem] font-headline font-normal tracking-tight text-foreground leading-none">
             Hi, I&apos;m Abhiram!
@@ -81,15 +81,15 @@ export default function Home() {
 
           {/* Narrative */}
           <div className="space-y-10 flex flex-col items-center w-full">
-            <p className="text-xl md:text-3xl text-muted-foreground leading-snug font-light w-full">
+            <p className="text-xl md:text-3xl text-muted-foreground leading-relaxed font-light w-full">
               An <span className="text-white font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities <br /> 
               and rapidly prototyping end-to-end solutions.
             </p>
 
             {/* Experience Group */}
             <div className="space-y-6 pt-4">
-              <span className="text-lg font-medium text-muted-foreground/60">Experience</span>
-              <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 grayscale hover:grayscale-0 transition-all duration-700 opacity-60 hover:opacity-100">
+              <span className="text-xl font-medium text-muted-foreground/60">Experience</span>
+              <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 grayscale hover:grayscale-0 transition-all duration-700 opacity-60 hover:opacity-100">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -98,7 +98,7 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="relative h-12 w-36 transition-transform hover:scale-110 active:scale-95"
+                      className="relative h-14 w-40 transition-transform hover:scale-110 active:scale-95"
                     >
                       {logo?.imageUrl && (
                         <Image 
