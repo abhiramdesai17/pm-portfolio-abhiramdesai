@@ -74,7 +74,7 @@ export default function Home() {
       <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-48 md:pb-16 max-w-7xl mx-auto">
         <div className="flex flex-col items-start gap-12">
           <h1 className="text-7xl md:text-9xl font-headline font-extrabold tracking-tighter text-foreground leading-[0.9] whitespace-nowrap">
-            Hi, I&apos;m Abhiram.
+            Hi, I&apos;m Abhiram!
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-light text-balance max-w-4xl">
             An AI Product Manager specialized in identifying high-leverage opportunities and rapidly prototyping end-to-end solutions.
