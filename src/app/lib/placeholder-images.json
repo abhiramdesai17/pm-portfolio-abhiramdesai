@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -8,12 +7,6 @@
       "imageHint": "professional portrait"
     },
     {
-      "id": "ghibli-portrait",
-      "description": "Ghibli style illustration of Abhiram in San Francisco",
-      "imageUrl": "https://picsum.photos/seed/ghibli-sf/800/800",
-      "imageHint": "ghibli san francisco"
-    },
-    {
       "id": "about-headshot",
       "description": "Primary headshot for about page",
       "imageUrl": "https://picsum.photos/seed/headshot/800/1000",
@@ -21,15 +14,15 @@
     },
     {
       "id": "about-bangalore",
-      "description": "Abhiram in Bangalore next to influential people list",
+      "description": "Abhiram in Bangalore influence list",
       "imageUrl": "https://picsum.photos/seed/bangalore/800/600",
-      "imageHint": "city life"
+      "imageHint": "city life bangalore"
     },
     {
       "id": "about-creative-covid",
       "description": "Building something creative at 4am during covid",
       "imageUrl": "https://picsum.photos/seed/creative/800/600",
-      "imageHint": "coding workspace"
+      "imageHint": "creative workspace midnight"
     },
     {
       "id": "about-boston",
@@ -59,7 +52,7 @@
       "id": "about-nyc-team",
       "description": "Team outing to NYC - rainy day in Times Square",
       "imageUrl": "https://picsum.photos/seed/nyc-team/1000/600",
-      "imageHint": "times square"
+      "imageHint": "times square rainy"
     },
     {
       "id": "about-travel-1",
@@ -78,6 +71,66 @@
       "description": "Travel photo - Desert mountains",
       "imageUrl": "https://picsum.photos/seed/travel3/600/800",
       "imageHint": "arizona desert"
+    },
+    {
+      "id": "project-postmates",
+      "description": "Postmates Plus expansion backdrop",
+      "imageUrl": "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "logistics delivery"
+    },
+    {
+      "id": "project-mental-health",
+      "description": "Mental Health Chatbot backdrop",
+      "imageUrl": "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=2064&auto=format&fit=crop",
+      "imageHint": "ai brain"
+    },
+    {
+      "id": "project-django",
+      "description": "Real Estate platform backdrop",
+      "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop",
+      "imageHint": "modern architecture"
+    },
+    {
+      "id": "project-spotify",
+      "description": "Spotify ETL backdrop",
+      "imageUrl": "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "music digital data"
+    },
+    {
+      "id": "project-ocr",
+      "description": "OCR Tool backdrop",
+      "imageUrl": "https://images.unsplash.com/photo-1568027762-72036f2619d7?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "scanning documents"
+    },
+    {
+      "id": "project-credit",
+      "description": "Credit Default Prediction backdrop",
+      "imageUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "finance analysis"
+    },
+    {
+      "id": "play-photography",
+      "description": "Photography passion",
+      "imageUrl": "https://picsum.photos/seed/photography/600/800",
+      "imageHint": "urban photography"
+    },
+    {
+      "id": "play-reading",
+      "description": "Reading tech ethics",
+      "imageUrl": "https://picsum.photos/seed/reading/600/400",
+      "imageHint": "reading book"
+    },
+    {
+      "id": "play-coding",
+      "description": "Side projects coding",
+      "imageUrl": "https://picsum.photos/seed/gadgets/600/400",
+      "imageHint": "coding at night"
+    },
+    {
+      "id": "play-lifestyle",
+      "description": "Coffee and lifestyle",
+      "imageUrl": "https://picsum.photos/seed/coffee/600/400",
+      "imageHint": "espresso cup"
     },
     {
       "id": "logo-amazon",

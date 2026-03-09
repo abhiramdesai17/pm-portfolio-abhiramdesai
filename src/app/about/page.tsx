@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Heart, MapPin, Trophy, Camera, Palmtree } from "lucide-react";
+import { ExternalLink, Heart, Trophy, Palmtree } from "lucide-react";
 import Link from "next/link";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 

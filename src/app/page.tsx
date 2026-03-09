@@ -19,7 +19,7 @@ const projects = [
     title: "Postmates Plus",
     description: "Strategic expansion into parcel logistics. Spearheaded the optimization of the premium subscription tier through A/B testing and iterative feature rollouts.",
     tags: ["Product Growth", "B2C Strategy"],
-    imageUrl: "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=2070&auto=format&fit=crop",
+    imageId: "project-postmates",
     slug: "postmates-plus",
     metrics: "22% Conversion Uplift"
   },
@@ -27,7 +27,7 @@ const projects = [
     title: "Mental Health GenAI Chatbot",
     description: "Owned product roadmap for a B2C GenAI platform. Partnered with clinical experts to translate complex requirements into measurable user engagement goals.",
     tags: ["Product Strategy", "GenAI"],
-    imageUrl: "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=2064&auto=format&fit=crop",
+    imageId: "project-mental-health",
     slug: "mental-health-chatbot",
     metrics: "15% Engagement Increase"
   },
@@ -35,7 +35,7 @@ const projects = [
     title: "Django Real Estate Platform",
     description: "A robust, high-performance property listing platform featuring agent-client management, advanced filtering, and secure user authentication.",
     tags: ["Python", "Django", "PostgreSQL"],
-    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop",
+    imageId: "project-django",
     slug: "django-real-estate",
     metrics: "25% Query Speedup"
   },
@@ -43,7 +43,7 @@ const projects = [
     title: "Spotify ETL Data Pipeline",
     description: "End-to-end serverless data pipeline on AWS. Automating data extraction, transformation, and loading for listening habit analytics.",
     tags: ["AWS", "Data Engineering", "Python"],
-    imageUrl: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
+    imageId: "project-spotify",
     slug: "spotify-etl",
     metrics: "100k+ Records Daily"
   },
@@ -51,7 +51,7 @@ const projects = [
     title: "Picture to Text OCR Project",
     description: "A high-precision OCR tool designed to extract structured data from complex documents using deep learning models.",
     tags: ["Computer Vision", "Deep Learning"],
-    imageUrl: "https://images.unsplash.com/photo-1568027762-72036f2619d7?q=80&w=2070&auto=format&fit=crop",
+    imageId: "project-ocr",
     slug: "pic-to-text",
     metrics: "98% Accuracy"
   },
@@ -59,7 +59,7 @@ const projects = [
     title: "Credit Card Default Prediction",
     description: "Developed predictive models to identify potential credit card defaults, improving risk assessment accuracy for financial institutions.",
     tags: ["Data Science", "Finance"],
-    imageUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
+    imageId: "project-credit",
     slug: "credit-default",
     metrics: "10% Risk Reduction"
   }
@@ -73,18 +73,18 @@ export default function Home() {
       {/* 1. Intro Section */}
       <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-24 max-w-full mx-auto text-center">
         <div className="flex flex-col items-center gap-6">
-          <h1 className="text-5xl md:text-7xl font-headline font-normal tracking-tight text-foreground leading-none">
+          <h1 className="text-5xl md:text-[7rem] font-headline font-normal tracking-tight text-foreground leading-none">
             Hi, I&apos;m Abhiram!
           </h1>
 
           <div className="space-y-12 flex flex-col items-center w-full">
             <p className="text-xl md:text-3xl text-muted-foreground leading-relaxed font-light w-full">
-              An <span className="text-foreground font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities <br /> 
-              and rapidly prototyping end-to-end solutions.
+              An <span className="text-foreground font-medium">AI Product Manager</span> specialized in identifying high-leverage <br />
+              opportunities and rapidly prototyping end-to-end solutions.
             </p>
 
             <div className="space-y-6 pt-4 flex flex-col items-center">
-              <span className="text-lg font-medium text-muted-foreground">Experience</span>
+              <span className="text-sm font-bold uppercase tracking-[0.4em] text-muted-foreground/60">Experience</span>
               <div className="flex flex-wrap items-center justify-center gap-6">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
@@ -94,7 +94,7 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-zinc-900/5 p-4 transition-all hover:scale-110 active:scale-95 border border-border/50 hover:border-border backdrop-blur-sm"
+                      className="group relative flex h-16 w-16 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 border border-border/40 hover:border-border overflow-hidden bg-background"
                     >
                       {logo?.imageUrl && (
                         <Image 
@@ -102,8 +102,7 @@ export default function Home() {
                           alt={exp.name} 
                           width={40} 
                           height={40} 
-                          className="object-contain"
-                          data-ai-hint={`${exp.name} logo`}
+                          className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
                         />
                       )}
                     </a>
@@ -113,7 +112,7 @@ export default function Home() {
             </div>
 
             <div className="pt-8">
-              <Button asChild className="rounded-full h-10 px-8 text-sm font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-xl shadow-foreground/5">
+              <Button asChild className="rounded-full h-12 px-8 text-sm font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-xl shadow-foreground/5">
                 <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={16} /></Link>
               </Button>
             </div>
@@ -125,7 +124,7 @@ export default function Home() {
       <section id="work" className="px-4 sm:px-6 lg:px-8 py-24 max-w-full mx-auto border-t border-border/5">
         <div className="mb-20 space-y-6 text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-muted-foreground">Case Studies</span>
-          <h2 className="text-5xl md:text-7xl font-headline font-normal tracking-tighter leading-none text-balance">
+          <h2 className="text-5xl md:text-[7rem] font-headline font-normal tracking-tighter leading-none text-balance">
             Bridging AI Potential <br />
             <span className="text-muted-foreground/40">and User Impact.</span>
           </h2>
@@ -133,14 +132,14 @@ export default function Home() {
         
         <div className="grid grid-cols-1 gap-12 max-w-7xl mx-auto">
           {projects.map((project) => (
-            <WorkCard key={project.slug} {...project} />
+            <WorkCard key={project.slug} {...project} imageUrl={PlaceHolderImages.find(img => img.id === project.imageId)?.imageUrl || ""} />
           ))}
         </div>
       </section>
 
       {/* 3. Core Expertise Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-24 border-t border-border/5">
-        <div className="max-w-7xl auto">
+        <div className="max-w-7xl mx-auto">
           <div className="mb-20 space-y-4">
              <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-muted-foreground">Capabilities</span>
             <h2 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter">Core Expertise</h2>
