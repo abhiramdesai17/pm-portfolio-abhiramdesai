@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Download, Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Download, Mail, Phone, Globe } from "lucide-react";
 import Link from "next/link";
 
 const experiences = [
@@ -48,8 +48,8 @@ export default function ResumePage() {
           <div className="p-12 bg-primary text-primary-foreground">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
               <div>
-                <h1 className="text-4xl font-headline font-bold mb-2">Abhiram Desai</h1>
-                <p className="text-xl text-accent font-medium">Product Manager | AI Specialist</p>
+                <h1 className="text-4xl font-headline font-bold mb-2 text-white">Abhiram Desai</h1>
+                <p className="text-xl text-accent font-medium">Product Manager</p>
               </div>
               <div className="space-y-2 text-sm opacity-90">
                 <div className="flex items-center gap-2">
@@ -57,9 +57,6 @@ export default function ResumePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone size={14} className="text-accent" /> +1(425)864-3723
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin size={14} className="text-accent" /> Seattle, WA
                 </div>
                 <div className="flex items-center gap-2">
                   <Globe size={14} className="text-accent" /> portfolio.abhiram.com
@@ -81,7 +78,7 @@ export default function ResumePage() {
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-widest text-accent mb-4">Core Skills</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["AI/ML", "GenAI", "SQL", "PowerBI", "Tableau", "AWS", "Azure", "Python", "A/B Testing", "Agile", "Scrum"].map(s => (
+                  {["AI Product Prototyping", "AI/ML", "SQL", "Python", "A/B Testing"].map(s => (
                     <Badge key={s} variant="secondary" className="text-[10px] font-bold uppercase">{s}</Badge>
                   ))}
                 </div>
@@ -139,14 +136,14 @@ export default function ResumePage() {
                 <h3 className="text-sm font-bold uppercase tracking-widest text-accent mb-6 flex items-center gap-2">
                   Selected Projects <div className="h-px flex-1 bg-border" />
                 </h3>
-                <div className="space-y-6">
+                <div className="space-y-8">
+                  <div>
+                    <h4 className="font-bold text-primary text-sm">Postmates Plus</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">Strategic expansion into parcel logistics and premium subscription tier optimization.</p>
+                  </div>
                   <div>
                     <h4 className="font-bold text-primary text-sm">Mental Health AI Chatbot</h4>
                     <p className="text-xs text-muted-foreground leading-relaxed">AI-driven conversational mental health platform leveraging RAG and clinical alignment.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-primary text-sm">Picture to Text OCR Tool</h4>
-                    <p className="text-xs text-muted-foreground leading-relaxed">High-precision OCR extraction tool for complex structured document processing.</p>
                   </div>
                 </div>
               </div>
