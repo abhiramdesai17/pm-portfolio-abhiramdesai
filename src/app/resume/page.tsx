@@ -44,12 +44,12 @@ export default function ResumePage() {
       
       <section className="px-4 sm:px-6 lg:px-8 py-20 max-w-5xl mx-auto">
         <div className="bg-card shadow-2xl rounded-3xl overflow-hidden border">
-          {/* Resume Header */}
+          {/* Resume Header - Fixed for theme visibility */}
           <div className="p-12 bg-primary text-primary-foreground">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
               <div>
-                <h1 className="text-4xl font-headline font-bold mb-2 text-white">Abhiram Desai</h1>
-                <p className="text-xl text-accent font-medium">Product Manager</p>
+                <h1 className="text-5xl font-headline font-bold mb-2">Abhiram Desai</h1>
+                <p className="text-xl font-medium opacity-90">Product Manager</p>
               </div>
               <div className="space-y-2 text-sm opacity-90">
                 <div className="flex items-center gap-2">
