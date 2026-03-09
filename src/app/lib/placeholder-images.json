@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -13,10 +14,70 @@
       "imageHint": "ghibli san francisco"
     },
     {
-      "id": "space-needle",
-      "description": "Icon of Seattle Space Needle",
-      "imageUrl": "https://picsum.photos/seed/spaceneedle/100/100",
-      "imageHint": "space needle"
+      "id": "about-headshot",
+      "description": "Primary headshot for about page",
+      "imageUrl": "https://picsum.photos/seed/headshot/800/1000",
+      "imageHint": "portrait photography"
+    },
+    {
+      "id": "about-bangalore",
+      "description": "Abhiram in Bangalore next to influential people list",
+      "imageUrl": "https://picsum.photos/seed/bangalore/800/600",
+      "imageHint": "city life"
+    },
+    {
+      "id": "about-creative-covid",
+      "description": "Building something creative at 4am during covid",
+      "imageUrl": "https://picsum.photos/seed/creative/800/600",
+      "imageHint": "coding workspace"
+    },
+    {
+      "id": "about-boston",
+      "description": "Exploring Boston, favorite US city",
+      "imageUrl": "https://picsum.photos/seed/boston/800/600",
+      "imageHint": "boston skyline"
+    },
+    {
+      "id": "about-neu-cricket",
+      "description": "Captain of Northeastern Cricket Team",
+      "imageUrl": "https://picsum.photos/seed/cricket-neu/800/600",
+      "imageHint": "cricket match"
+    },
+    {
+      "id": "about-shane-bond",
+      "description": "With Shane Bond at MLC camp",
+      "imageUrl": "https://picsum.photos/seed/shane-bond/600/800",
+      "imageHint": "athlete portrait"
+    },
+    {
+      "id": "about-ross-taylor",
+      "description": "With Ross Taylor at MLC camp",
+      "imageUrl": "https://picsum.photos/seed/ross-taylor/600/800",
+      "imageHint": "athlete portrait"
+    },
+    {
+      "id": "about-nyc-team",
+      "description": "Team outing to NYC - rainy day in Times Square",
+      "imageUrl": "https://picsum.photos/seed/nyc-team/1000/600",
+      "imageHint": "times square"
+    },
+    {
+      "id": "about-travel-1",
+      "description": "Travel photo - National Park",
+      "imageUrl": "https://picsum.photos/seed/travel1/600/800",
+      "imageHint": "national park"
+    },
+    {
+      "id": "about-travel-2",
+      "description": "Travel photo - Coastal run",
+      "imageUrl": "https://picsum.photos/seed/travel2/600/800",
+      "imageHint": "beach coast"
+    },
+    {
+      "id": "about-travel-3",
+      "description": "Travel photo - Desert mountains",
+      "imageUrl": "https://picsum.photos/seed/travel3/600/800",
+      "imageHint": "arizona desert"
     },
     {
       "id": "logo-amazon",
