@@ -28,13 +28,15 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden order-1 lg:order-2 shadow-2xl">
-             <Image
-                src={getImg("about-headshot")?.imageUrl || ""}
-                alt="Abhiram Desai"
-                fill
-                className="object-cover"
-                priority
-              />
+             {getImg("about-headshot")?.imageUrl && (
+               <Image
+                  src={getImg("about-headshot")!.imageUrl}
+                  alt="Abhiram Desai"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+             )}
           </div>
         </div>
       </section>
@@ -53,13 +55,15 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative aspect-video rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
-               <Image
-                  src={getImg("about-bangalore")?.imageUrl || ""}
-                  alt="Bangalore Influence"
-                  fill
-                  className="object-cover"
-                  data-ai-hint="city life bangalore"
-                />
+               {getImg("about-bangalore")?.imageUrl && (
+                 <Image
+                    src={getImg("about-bangalore")!.imageUrl}
+                    alt="Bangalore Influence"
+                    fill
+                    className="object-cover"
+                    data-ai-hint="city life bangalore"
+                  />
+               )}
                 <div className="absolute bottom-6 left-6 bg-background/80 backdrop-blur-md px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">
                   Bangalore: Influential Roots
                 </div>
@@ -82,13 +86,15 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
              <div className="relative aspect-square rounded-[4rem] overflow-hidden shadow-xl">
-               <Image
-                  src={getImg("about-creative-covid")?.imageUrl || ""}
-                  alt="Creative at 4am"
-                  fill
-                  className="object-cover"
-                  data-ai-hint="creative workspace midnight"
-                />
+               {getImg("about-creative-covid")?.imageUrl && (
+                 <Image
+                    src={getImg("about-creative-covid")!.imageUrl}
+                    alt="Creative at 4am"
+                    fill
+                    className="object-cover"
+                    data-ai-hint="creative workspace midnight"
+                  />
+               )}
             </div>
             <div className="space-y-8">
               <Badge className="bg-primary text-primary-foreground">The Turning Point</Badge>
@@ -126,13 +132,15 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
-               <Image
-                  src={getImg("about-boston")?.imageUrl || ""}
-                  alt="Boston Northeastern"
-                  fill
-                  className="object-cover"
-                  data-ai-hint="boston skyline"
-                />
+               {getImg("about-boston")?.imageUrl && (
+                 <Image
+                    src={getImg("about-boston")!.imageUrl}
+                    alt="Boston Northeastern"
+                    fill
+                    className="object-cover"
+                    data-ai-hint="boston skyline"
+                  />
+               )}
             </div>
           </div>
         </div>
@@ -142,13 +150,15 @@ export default function AboutPage() {
       <section className="py-32 border-t border-border/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
-            <Image
-              src={getImg("about-nyc-team")?.imageUrl || ""}
-              alt="Amazon Team Outing NYC"
-              fill
-              className="object-cover"
-              data-ai-hint="times square rainy"
-            />
+            {getImg("about-nyc-team")?.imageUrl && (
+              <Image
+                src={getImg("about-nyc-team")!.imageUrl}
+                alt="Amazon Team Outing NYC"
+                fill
+                className="object-cover"
+                data-ai-hint="times square rainy"
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-10 left-10 text-white">
                <p className="text-[10px] font-bold uppercase tracking-[0.4em] mb-2">Team Outing</p>
@@ -190,14 +200,20 @@ export default function AboutPage() {
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl translate-y-8">
-                <Image src={getImg("about-neu-cricket")?.imageUrl || ""} alt="NEU Cricket" fill className="object-cover" />
+                {getImg("about-neu-cricket")?.imageUrl && (
+                  <Image src={getImg("about-neu-cricket")!.imageUrl} alt="NEU Cricket" fill className="object-cover" />
+                )}
               </div>
               <div className="space-y-4">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image src={getImg("about-shane-bond")?.imageUrl || ""} alt="With Shane Bond" fill className="object-cover" />
+                  {getImg("about-shane-bond")?.imageUrl && (
+                    <Image src={getImg("about-shane-bond")!.imageUrl} alt="With Shane Bond" fill className="object-cover" />
+                  )}
                 </div>
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image src={getImg("about-ross-taylor")?.imageUrl || ""} alt="With Ross Taylor" fill className="object-cover" />
+                  {getImg("about-ross-taylor")?.imageUrl && (
+                    <Image src={getImg("about-ross-taylor")!.imageUrl} alt="With Ross Taylor" fill className="object-cover" />
+                  )}
                 </div>
               </div>
             </div>
@@ -227,13 +243,19 @@ export default function AboutPage() {
           <div className="lg:col-span-8">
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
               <div className="relative aspect-[3/4] rounded-3xl overflow-hidden group">
-                <Image src={getImg("about-travel-1")?.imageUrl || ""} alt="Travel 1" fill className="object-cover transition-transform group-hover:scale-110 duration-700" />
+                {getImg("about-travel-1")?.imageUrl && (
+                  <Image src={getImg("about-travel-1")!.imageUrl} alt="Travel 1" fill className="object-cover transition-transform group-hover:scale-110 duration-700" />
+                )}
               </div>
               <div className="relative aspect-[3/4] rounded-3xl overflow-hidden group translate-y-8">
-                <Image src={getImg("about-travel-2")?.imageUrl || ""} alt="Travel 2" fill className="object-cover transition-transform group-hover:scale-110 duration-700" />
+                {getImg("about-travel-2")?.imageUrl && (
+                  <Image src={getImg("about-travel-2")!.imageUrl} alt="Travel 2" fill className="object-cover transition-transform group-hover:scale-110 duration-700" />
+                )}
               </div>
               <div className="relative aspect-[3/4] rounded-3xl overflow-hidden group hidden md:block">
-                <Image src={getImg("about-travel-3")?.imageUrl || ""} alt="Travel 3" fill className="object-cover transition-transform group-hover:scale-110 duration-700" />
+                {getImg("about-travel-3")?.imageUrl && (
+                  <Image src={getImg("about-travel-3")!.imageUrl} alt="Travel 3" fill className="object-cover transition-transform group-hover:scale-110 duration-700" />
+                )}
               </div>
             </div>
             <div className="mt-20 flex flex-wrap gap-3 justify-center">
