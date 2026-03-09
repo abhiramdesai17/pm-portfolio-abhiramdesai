@@ -34,8 +34,8 @@ export function Navbar() {
                 key={item.name}
                 href={item.path}
                 className={cn(
-                  "text-sm font-bold uppercase tracking-widest transition-all hover:text-white",
-                  pathname === item.path ? "text-white" : "text-muted-foreground"
+                  "text-sm font-bold uppercase tracking-widest transition-all hover:text-foreground",
+                  pathname === item.path ? "text-foreground underline decoration-2 underline-offset-8" : "text-muted-foreground"
                 )}
               >
                 {item.name}
@@ -68,7 +68,7 @@ export function Navbar() {
                 className={cn(
                   "block px-3 py-2 rounded-md text-base font-medium",
                   pathname === item.path
-                    ? "text-white bg-white/5"
+                    ? "text-foreground bg-accent/10"
                     : "text-muted-foreground hover:bg-muted"
                 )}
               >

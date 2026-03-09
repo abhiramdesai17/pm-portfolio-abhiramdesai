@@ -53,7 +53,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground transition-colors duration-500 antialiased selection:bg-white selection:text-black;
+    @apply bg-background text-foreground transition-colors duration-500 antialiased selection:bg-foreground selection:text-background;
   }
 }
 

@@ -73,21 +73,18 @@ export default function Home() {
       {/* 1. Intro Section */}
       <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-24 max-w-full mx-auto text-center">
         <div className="flex flex-col items-center gap-6">
-          {/* Headline - Single line, balanced size */}
-          <h1 className="text-5xl md:text-[7rem] font-headline font-normal tracking-tight text-foreground leading-none">
+          <h1 className="text-5xl md:text-7xl font-headline font-normal tracking-tight text-foreground leading-none">
             Hi, I&apos;m Abhiram!
           </h1>
 
-          {/* Narrative - Split exactly after 'opportunities' */}
           <div className="space-y-12 flex flex-col items-center w-full">
             <p className="text-xl md:text-3xl text-muted-foreground leading-relaxed font-light w-full">
-              An <span className="text-white font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities <br /> 
+              An <span className="text-foreground font-medium">AI Product Manager</span> specialized in identifying high-leverage opportunities <br /> 
               and rapidly prototyping end-to-end solutions.
             </p>
 
-            {/* Experience Group */}
             <div className="space-y-6 pt-4 flex flex-col items-center">
-              <span className="text-2xl font-medium text-muted-foreground">Experience</span>
+              <span className="text-lg font-medium text-muted-foreground">Experience</span>
               <div className="flex flex-wrap items-center justify-center gap-6">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
@@ -97,14 +94,14 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative flex h-20 w-20 items-center justify-center rounded-full bg-zinc-900/50 p-4 shadow-xl transition-all hover:scale-110 active:scale-95 ring-1 ring-white/10 hover:ring-white/30 backdrop-blur-sm"
+                      className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-zinc-900/5 p-4 transition-all hover:scale-110 active:scale-95 border border-border/50 hover:border-border backdrop-blur-sm"
                     >
                       {logo?.imageUrl && (
                         <Image 
                           src={logo.imageUrl} 
                           alt={exp.name} 
-                          width={48} 
-                          height={48} 
+                          width={40} 
+                          height={40} 
                           className="object-contain"
                           data-ai-hint={`${exp.name} logo`}
                         />
@@ -116,8 +113,8 @@ export default function Home() {
             </div>
 
             <div className="pt-8">
-              <Button asChild className="rounded-full h-12 px-8 text-base font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-xl shadow-foreground/10">
-                <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={18} /></Link>
+              <Button asChild className="rounded-full h-10 px-8 text-sm font-bold transition-all bg-foreground text-background hover:bg-foreground/90 shadow-xl shadow-foreground/5">
+                <Link href="#work">View Case Studies <ArrowRight className="ml-2" size={16} /></Link>
               </Button>
             </div>
           </div>
@@ -125,16 +122,15 @@ export default function Home() {
       </section>
 
       {/* 2. Work Section */}
-      <section id="work" className="px-4 sm:px-6 lg:px-8 py-24 max-w-full mx-auto border-t border-white/5">
+      <section id="work" className="px-4 sm:px-6 lg:px-8 py-24 max-w-full mx-auto border-t border-border/5">
         <div className="mb-20 space-y-6 text-center">
           <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-muted-foreground">Case Studies</span>
-          <h2 className="text-5xl md:text-[7rem] font-headline font-normal tracking-tighter leading-none text-balance">
+          <h2 className="text-5xl md:text-7xl font-headline font-normal tracking-tighter leading-none text-balance">
             Bridging AI Potential <br />
             <span className="text-muted-foreground/40">and User Impact.</span>
           </h2>
         </div>
         
-        {/* Project Grid - Single column, full width stretching */}
         <div className="grid grid-cols-1 gap-12 max-w-7xl mx-auto">
           {projects.map((project) => (
             <WorkCard key={project.slug} {...project} />
@@ -143,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* 3. Core Expertise Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-24 bg-black border-t border-white/5">
+      <section className="px-4 sm:px-6 lg:px-8 py-24 border-t border-border/5">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20 space-y-4">
              <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-muted-foreground">Capabilities</span>
@@ -154,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/5 bg-black py-24">
+      <footer className="border-t border-border/5 bg-background py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
             <div className="space-y-8">
@@ -162,27 +158,27 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center md:items-end gap-6">
               <div className="flex flex-col items-center md:items-end gap-4 w-full md:w-auto">
-                <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-white hover:bg-white hover:text-black transition-all px-10 h-16 text-lg font-bold w-full md:w-auto">
+                <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-foreground hover:bg-foreground hover:text-background transition-all px-10 h-16 text-lg font-bold w-full md:w-auto">
                   <a href="mailto:abhiramdesai.99@gmail.com">Get in Touch</a>
                 </Button>
                 <div className="flex items-center gap-6 justify-center md:justify-end">
                   <Link 
                     href="https://linkedin.com/in/abhiramdesai" 
                     target="_blank"
-                    className="text-muted-foreground hover:text-white transition-all hover:scale-110"
+                    className="text-muted-foreground hover:text-foreground transition-all hover:scale-110"
                   >
                     <Linkedin size={20} />
                   </Link>
                   <Link 
                     href="https://github.com/abhiramdesai17" 
                     target="_blank"
-                    className="text-muted-foreground hover:text-white transition-all hover:scale-110"
+                    className="text-muted-foreground hover:text-foreground transition-all hover:scale-110"
                   >
                     <Github size={20} />
                   </Link>
                   <Link 
                     href="mailto:abhiramdesai.99@gmail.com"
-                    className="text-muted-foreground hover:text-white transition-all hover:scale-110"
+                    className="text-muted-foreground hover:text-foreground transition-all hover:scale-110"
                   >
                     <Mail size={20} />
                   </Link>
@@ -190,13 +186,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="pt-16 flex flex-col md:flex-row justify-between gap-10 text-[10px] text-muted-foreground border-t border-white/10 uppercase font-bold tracking-[0.3em]">
+          <div className="pt-16 flex flex-col md:flex-row justify-between gap-10 text-[10px] text-muted-foreground border-t border-border/10 uppercase font-bold tracking-[0.3em]">
             <p className="font-light">© 2026 Abhiram Desai.</p>
             <div className="flex flex-wrap gap-10">
-              <Link href="/" className="hover:text-white transition-colors">Work</Link>
-              <Link href="/about" className="hover:text-white transition-colors">About</Link>
-              <Link href="/play" className="hover:text-white transition-colors">Play</Link>
-              <Link href="/resume" className="hover:text-white transition-colors">Resume</Link>
+              <Link href="/" className="hover:text-foreground transition-colors">Work</Link>
+              <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
+              <Link href="/play" className="hover:text-foreground transition-colors">Play</Link>
+              <Link href="/resume" className="hover:text-foreground transition-colors">Resume</Link>
             </div>
           </div>
         </div>
