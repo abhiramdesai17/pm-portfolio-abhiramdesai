@@ -136,25 +136,25 @@
     {
       "id": "logo-amazon",
       "description": "Amazon Icon",
-      "imageUrl": "/amazon.jpg",
+      "imageUrl": "/amazon-logo-1.png",
       "imageHint": "amazon logo"
     },
     {
       "id": "logo-philips",
       "description": "Philips Shield",
-      "imageUrl": "/philips.jpg",
+      "imageUrl": "/philips-logo.png",
       "imageHint": "philips logo"
     },
     {
       "id": "logo-northeastern",
       "description": "Northeastern Seal",
-      "imageUrl": "/northeastern.jpg",
+      "imageUrl": "/neu-logo.png",
       "imageHint": "university logo"
     },
     {
       "id": "logo-accenture",
       "description": "Accenture Icon",
-      "imageUrl": "/accenture.jpg",
+      "imageUrl": "/accenture-logo.png",
       "imageHint": "accenture logo"
     }
   ]

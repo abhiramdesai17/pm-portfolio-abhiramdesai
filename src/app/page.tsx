@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 import { WorkCard } from "@/components/WorkCard";
 import { SkillMatrix } from "@/components/SkillMatrix";
@@ -84,13 +83,13 @@ export default function Home() {
               opportunities and rapidly prototyping end-to-end solutions.
             </p>
 
-            <div className="space-y-8 pt-4 flex flex-col items-center">
+            <div className="space-y-10 pt-4 flex flex-col items-center">
               <div className="flex items-center gap-4 text-muted-foreground/60">
                  <span className="text-[10px] font-bold uppercase tracking-[0.4em]">Experience</span>
                  <div className="h-px w-12 bg-border" />
               </div>
               
-              <div className="flex flex-wrap items-center justify-center gap-12">
+              <div className="flex flex-wrap items-center justify-center gap-10">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -99,7 +98,7 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative h-10 w-28 transition-all hover:scale-110 active:scale-95 flex items-center justify-center"
+                      className="group relative h-14 w-40 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
                     >
                       {logo?.imageUrl && (
                         <Image 
