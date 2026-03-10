@@ -3,133 +3,133 @@
   "placeholderImages": [
     {
       "id": "hero-portrait",
-      "description": "Professional portrait of a product manager",
+      "description": "Professional portrait for the home page hero section",
       "imageUrl": "https://picsum.photos/seed/abhiram/800/800",
       "imageHint": "professional portrait"
     },
     {
       "id": "about-headshot",
-      "description": "Primary headshot for about page",
+      "description": "Primary headshot for the top of the About page",
       "imageUrl": "https://picsum.photos/seed/headshot/800/1000",
       "imageHint": "portrait photography"
     },
     {
       "id": "about-bangalore",
-      "description": "Abhiram in Bangalore influence list",
+      "description": "Image representing Bangalore roots",
       "imageUrl": "https://picsum.photos/seed/bangalore/800/600",
       "imageHint": "city life bangalore"
     },
     {
       "id": "about-creative-covid",
-      "description": "Building something creative at 4am during covid",
+      "description": "Image of building something creative during COVID",
       "imageUrl": "https://picsum.photos/seed/creative/800/600",
       "imageHint": "creative workspace midnight"
     },
     {
       "id": "about-boston",
-      "description": "Exploring Boston, favorite US city",
+      "description": "Boston / Northeastern University landscape",
       "imageUrl": "https://picsum.photos/seed/boston/800/600",
       "imageHint": "boston skyline"
     },
     {
       "id": "about-neu-cricket",
-      "description": "Captain of Northeastern Cricket Team",
+      "description": "Northeastern Cricket Team action shot",
       "imageUrl": "https://picsum.photos/seed/cricket-neu/800/600",
       "imageHint": "cricket match"
     },
     {
       "id": "about-shane-bond",
-      "description": "With Shane Bond at MLC camp",
+      "description": "Photo with Shane Bond",
       "imageUrl": "https://picsum.photos/seed/shane-bond/600/800",
       "imageHint": "athlete portrait"
     },
     {
       "id": "about-ross-taylor",
-      "description": "With Ross Taylor at MLC camp",
+      "description": "Photo with Ross Taylor",
       "imageUrl": "https://picsum.photos/seed/ross-taylor/600/800",
       "imageHint": "athlete portrait"
     },
     {
       "id": "about-nyc-team",
-      "description": "Team outing to NYC - rainy day in Times Square",
+      "description": "Amazon team outing in NYC Times Square",
       "imageUrl": "https://picsum.photos/seed/nyc-team/1000/600",
       "imageHint": "times square rainy"
     },
     {
       "id": "about-travel-1",
-      "description": "Travel photo - National Park",
+      "description": "Travel highlight 1",
       "imageUrl": "https://picsum.photos/seed/travel1/600/800",
       "imageHint": "national park"
     },
     {
       "id": "about-travel-2",
-      "description": "Travel photo - Coastal run",
+      "description": "Travel highlight 2",
       "imageUrl": "https://picsum.photos/seed/travel2/600/800",
       "imageHint": "beach coast"
     },
     {
       "id": "about-travel-3",
-      "description": "Travel photo - Desert mountains",
+      "description": "Travel highlight 3",
       "imageUrl": "https://picsum.photos/seed/travel3/600/800",
       "imageHint": "arizona desert"
     },
     {
       "id": "project-postmates",
-      "description": "Postmates Plus expansion backdrop",
+      "description": "Postmates Plus project background",
       "imageUrl": "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "logistics delivery"
     },
     {
       "id": "project-mental-health",
-      "description": "Mental Health Chatbot backdrop",
+      "description": "Mental Health Chatbot project background",
       "imageUrl": "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=2064&auto=format&fit=crop",
       "imageHint": "ai brain"
     },
     {
       "id": "project-django",
-      "description": "Real Estate platform backdrop",
+      "description": "Django Real Estate project background",
       "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop",
       "imageHint": "modern architecture"
     },
     {
       "id": "project-spotify",
-      "description": "Spotify ETL backdrop",
+      "description": "Spotify ETL project background",
       "imageUrl": "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "music digital data"
     },
     {
       "id": "project-ocr",
-      "description": "OCR Tool backdrop",
+      "description": "OCR Tool project background",
       "imageUrl": "https://images.unsplash.com/photo-1568027762-72036f2619d7?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "scanning documents"
     },
     {
       "id": "project-credit",
-      "description": "Credit Default Prediction backdrop",
+      "description": "Credit Default project background",
       "imageUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "finance analysis"
     },
     {
       "id": "play-photography",
-      "description": "Photography passion",
+      "description": "Photography hobby image",
       "imageUrl": "https://picsum.photos/seed/photography/600/800",
       "imageHint": "urban photography"
     },
     {
       "id": "play-reading",
-      "description": "Reading tech ethics",
+      "description": "Reading hobby image",
       "imageUrl": "https://picsum.photos/seed/reading/600/400",
       "imageHint": "reading book"
     },
     {
       "id": "play-coding",
-      "description": "Side projects coding",
+      "description": "Coding hobby image",
       "imageUrl": "https://picsum.photos/seed/gadgets/600/400",
       "imageHint": "coding at night"
     },
     {
       "id": "play-lifestyle",
-      "description": "Coffee and lifestyle",
+      "description": "Coffee/Lifestyle image",
       "imageUrl": "https://picsum.photos/seed/coffee/600/400",
       "imageHint": "espresso cup"
     },
