@@ -1,0 +1,443 @@
+{
+  "entities": {
+    "UserProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserProfile",
+      "type": "object",
+      "description": "Stores the core personal and professional information of the portfolio owner.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the UserProfile entity."
+        },
+        "firstName": {
+          "type": "string",
+          "description": "The first name of the portfolio owner."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "The last name of the portfolio owner."
+        },
+        "email": {
+          "type": "string",
+          "description": "The professional email address of the portfolio owner.",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string",
+          "description": "The contact phone number of the portfolio owner."
+        },
+        "linkedinUrl": {
+          "type": "string",
+          "description": "URL to the portfolio owner's LinkedIn profile.",
+          "format": "uri"
+        },
+        "githubUrl": {
+          "type": "string",
+          "description": "URL to the portfolio owner's GitHub profile.",
+          "format": "uri"
+        },
+        "summary": {
+          "type": "string",
+          "description": "A concise professional summary or elevator pitch for the 'About Me' section."
+        },
+        "bio": {
+          "type": "string",
+          "description": "A detailed biography for the 'About Me' section, describing professional philosophy and journey."
+        },
+        "profileImageUrl": {
+          "type": "string",
+          "description": "URL to the profile image of the portfolio owner.",
+          "format": "uri"
+        },
+        "resumeDownloadUrl": {
+          "type": "string",
+          "description": "URL to download the full resume/CV directly from the portfolio.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "summary"
+      ]
+    },
+    "ExperienceEntry": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ExperienceEntry",
+      "type": "object",
+      "description": "Represents a single professional work experience entry from the user's resume.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the ExperienceEntry entity."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to UserProfile. (Relationship: UserProfile 1:N ExperienceEntry)"
+        },
+        "title": {
+          "type": "string",
+          "description": "The job title held (e.g., 'Product Manager')."
+        },
+        "company": {
+          "type": "string",
+          "description": "The name of the company or organization."
+        },
+        "startDate": {
+          "type": "string",
+          "description": "The start date of the experience.",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "description": "The end date of the experience. Null if 'Present'.",
+          "format": "date"
+        },
+        "isCurrent": {
+          "type": "boolean",
+          "description": "Indicates if this is the user's current position."
+        },
+        "descriptionPoints": {
+          "type": "array",
+          "description": "A list of bullet points describing responsibilities and achievements.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "title",
+        "company",
+        "startDate",
+        "descriptionPoints",
+        "isCurrent"
+      ]
+    },
+    "SkillCategory": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "SkillCategory",
+      "type": "object",
+      "description": "Categorizes different types of skills (e.g., Technical Skills, Product Management, Certifications) for the 'Interactive Skill Matrix'.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the SkillCategory entity."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to UserProfile. (Relationship: UserProfile 1:N SkillCategory)"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the skill category (e.g., 'Technical Skills', 'Product Management')."
+        },
+        "displayOrder": {
+          "type": "number",
+          "description": "The order in which skill categories should be displayed in the UI."
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "name",
+        "displayOrder"
+      ]
+    },
+    "Skill": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Skill",
+      "type": "object",
+      "description": "Represents an individual skill or tool possessed by the user, linked to a category.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Skill entity."
+        },
+        "skillCategoryId": {
+          "type": "string",
+          "description": "Reference to SkillCategory. (Relationship: SkillCategory 1:N Skill)"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the skill (e.g., 'SQL', 'A/B Testing')."
+        },
+        "proficiencyLevel": {
+          "type": "number",
+          "description": "A numerical representation of the skill proficiency (e.g., 1-5 scale for 'Interactive Skill Matrix')."
+        },
+        "description": {
+          "type": "string",
+          "description": "An optional brief explanation or context for the skill."
+        }
+      },
+      "required": [
+        "id",
+        "skillCategoryId",
+        "name",
+        "proficiencyLevel"
+      ]
+    },
+    "Project": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Project",
+      "type": "object",
+      "description": "Detailed entry for a professional case study or personal project, displayed in 'Work' or 'Play' sections.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Project entity."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to UserProfile. (Relationship: UserProfile 1:N Project)"
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the project (e.g., 'Mental Health AI Chatbot')."
+        },
+        "type": {
+          "type": "string",
+          "description": "The categorization of the project (e.g., 'work', 'play', 'github').",
+          "items": {
+            "type": "string"
+          }
+        },
+        "shortDescription": {
+          "type": "string",
+          "description": "A brief summary of the project, often used for display cards."
+        },
+        "problemStatement": {
+          "type": "string",
+          "description": "Description of the problem the project aimed to solve (for case studies)."
+        },
+        "solutionDescription": {
+          "type": "string",
+          "description": "Details of the solution implemented in the project."
+        },
+        "myRole": {
+          "type": "string",
+          "description": "The user's specific role and responsibilities in the project."
+        },
+        "outcomesAndMetrics": {
+          "type": "array",
+          "description": "A list of key outcomes, achievements, and measurable metrics.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "githubRepoUrl": {
+          "type": "string",
+          "description": "URL to the GitHub repository for the project, if applicable.",
+          "format": "uri"
+        },
+        "liveDemoUrl": {
+          "type": "string",
+          "description": "URL to a live demo or deployed version of the project, if applicable.",
+          "format": "uri"
+        },
+        "mainImageUrl": {
+          "type": "string",
+          "description": "URL to the primary image representing the project.",
+          "format": "uri"
+        },
+        "technologiesUsed": {
+          "type": "array",
+          "description": "A list of technologies, tools, or frameworks used in the project.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "displayOrder": {
+          "type": "number",
+          "description": "The order in which the project should be displayed within its section (e.g., 'Work' or 'Play')."
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "title",
+        "type",
+        "shortDescription"
+      ]
+    },
+    "EducationEntry": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "EducationEntry",
+      "type": "object",
+      "description": "Represents an academic qualification of the user.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the EducationEntry entity."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to UserProfile. (Relationship: UserProfile 1:N EducationEntry)"
+        },
+        "degree": {
+          "type": "string",
+          "description": "The degree obtained (e.g., 'Master of Science', 'Bachelor of Technology')."
+        },
+        "major": {
+          "type": "string",
+          "description": "The field of study or major."
+        },
+        "institution": {
+          "type": "string",
+          "description": "The name of the educational institution."
+        },
+        "startDate": {
+          "type": "string",
+          "description": "The start date of the education period.",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "description": "The end date of the education period. Can be null if ongoing.",
+          "format": "date"
+        },
+        "description": {
+          "type": "string",
+          "description": "Optional: relevant coursework, honors, or achievements during this education."
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "degree",
+        "institution",
+        "startDate"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/user_profiles/{userId}",
+        "definition": {
+          "entityName": "UserProfile",
+          "schema": {
+            "$ref": "#/backend/entities/UserProfile"
+          },
+          "description": "Stores the core personal and professional information for a user's portfolio. Includes a 'status' field ('DRAFT' | 'PUBLISHED') to control public visibility of the entire portfolio."
+        }
+      },
+      {
+        "path": "/user_profiles/{userId}/experience_entries/{experienceId}",
+        "definition": {
+          "entityName": "ExperienceEntry",
+          "schema": {
+            "$ref": "#/backend/entities/ExperienceEntry"
+          },
+          "description": "Represents a single professional work experience entry. Includes denormalized 'ownerId' and 'portfolioStatus' for authorization independence and QAPs.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the UserProfile owner."
+            },
+            {
+              "name": "experienceId",
+              "description": "The unique identifier of the ExperienceEntry."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/user_profiles/{userId}/skill_categories/{skillCategoryId}",
+        "definition": {
+          "entityName": "SkillCategory",
+          "schema": {
+            "$ref": "#/backend/entities/SkillCategory"
+          },
+          "description": "Categorizes different types of skills. Includes denormalized 'ownerId' and 'portfolioStatus' for authorization independence and QAPs.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the UserProfile owner."
+            },
+            {
+              "name": "skillCategoryId",
+              "description": "The unique identifier of the SkillCategory."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/user_profiles/{userId}/skill_categories/{skillCategoryId}/skills/{skillId}",
+        "definition": {
+          "entityName": "Skill",
+          "schema": {
+            "$ref": "#/backend/entities/Skill"
+          },
+          "description": "Represents an individual skill linked to a category. Includes denormalized 'ownerId' and 'portfolioStatus' for authorization independence and QAPs.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the UserProfile owner."
+            },
+            {
+              "name": "skillCategoryId",
+              "description": "The unique identifier of the parent SkillCategory."
+            },
+            {
+              "name": "skillId",
+              "description": "The unique identifier of the Skill."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/user_profiles/{userId}/projects/{projectId}",
+        "definition": {
+          "entityName": "Project",
+          "schema": {
+            "$ref": "#/backend/entities/Project"
+          },
+          "description": "Detailed entry for a professional case study or personal project. Includes denormalized 'ownerId' and 'portfolioStatus' for authorization independence and QAPs.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the UserProfile owner."
+            },
+            {
+              "name": "projectId",
+              "description": "The unique identifier of the Project."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/user_profiles/{userId}/education_entries/{educationId}",
+        "definition": {
+          "entityName": "EducationEntry",
+          "schema": {
+            "$ref": "#/backend/entities/EducationEntry"
+          },
+          "description": "Represents an academic qualification of the user. Includes denormalized 'ownerId' and 'portfolioStatus' for authorization independence and QAPs.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the UserProfile owner."
+            },
+            {
+              "name": "educationId",
+              "description": "The unique identifier of the EducationEntry."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure for 'PM Connect' prioritizes Authorization Independence and Query-Aware Security Rules (QAPs) through a path-based ownership model combined with strategic denormalization. Each user's portfolio data is organized under a root `user_profiles/{userId}` document. This `UserProfile` document contains a `status` field (`DRAFT` or `PUBLISHED`) to control the public visibility of the entire portfolio.\n\nTo achieve Authorization Independence, every document within subcollections (e.g., `experience_entries`, `skill_categories`, `projects`, `education_entries`, and nested `skills`) will explicitly include two denormalized fields: `ownerId` and `portfolioStatus`. The `ownerId` field directly stores the `userId` of the portfolio owner, ensuring that write operations for any document can be authorized by simply checking `request.auth.uid == resource.data.ownerId`, without requiring `get()` calls to parent documents. Similarly, the `portfolioStatus` field, denormalized from the `UserProfile.status`, enables read access rules to check `resource.data.portfolioStatus == 'PUBLISHED'` for publicly accessible documents, again avoiding hierarchical dependencies.\n\nThis denormalization strategy is critical for supporting QAPs. For authenticated users, `list` operations on their own data can be secured by `resource.data.ownerId == request.auth.uid`. For public viewers, queries can include `where('portfolioStatus', '==', 'PUBLISHED')`, and the security rules can efficiently enforce this filter on a per-document basis using the denormalized field. This prevents rules from acting as data filters, ensuring only authorized data is returned. The structure also implements Structural Segregation by clearly defining private (owner-editable) and public (published) states at the document level, avoiding mixed security postures within a single collection based on complex rule logic. The 'AI Project Storyteller' is an application feature that would likely interact with project data via Cloud Functions, not requiring its own Firestore path."
+  }
+}

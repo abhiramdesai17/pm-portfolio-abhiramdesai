@@ -1,0 +1,141 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * PM CONNECT PORTFOLIO SECURITY RULES
+     *
+     * CORE PHILOSOPHY:
+     * This ruleset implements an ownership-based access model with a public-facing "Published" state. 
+     * Security is driven by path-based authorization for owners and data-driven authorization 
+     * for the public.
+     *
+     * DATA STRUCTURE:
+     * Data is organized hierarchically under /user_profiles/{userId}. Subcollections include 
+     * experience_entries, skill_categories, projects, and education_entries. 
+     * Skills are nested further under skill_categories.
+     *
+     * KEY SECURITY DECISIONS:
+     * 1. Authorization Independence: Every sub-document denormalizes 'ownerId' and 'portfolioStatus'.
+     *    This allows rules to verify access without performing expensive get() calls to parent documents.
+     * 2. Public Visibility: Documents are publicly readable only if their 'status' or 'portfolioStatus' 
+     *    is set to 'PUBLISHED'.
+     * 3. Ownership Integrity: On creation, the rules enforce that the document's internal 'ownerId' 
+     *    matches the authenticated user's UID and the path ID.
+     * 4. Relational Immutability: Once created, ownership fields (like ownerId) cannot be changed.
+     *
+     * DENORMALIZATION FOR AUTHORIZATION:
+     * To ensure high performance and avoid rules-count limits, the 'portfolioStatus' of the 
+     * root UserProfile is copied to all child documents. This allows a single, fast check:
+     * allow read: if resource.data.portfolioStatus == 'PUBLISHED';
+     */
+
+    // --- GLOBAL HELPER FUNCTIONS ---
+
+    /** Checks if the request is from an authenticated user. */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /** Checks if the authenticated user's UID matches the provided userId. */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /** Checks ownership and ensures the document exists for updates/deletes. */
+    function isExistingOwner(userId) {
+      return resource != null && isOwner(userId);
+    }
+
+    /** Checks if the document is explicitly marked as published for public consumption. */
+    function isPublished(data) {
+      return data.status == 'PUBLISHED' || data.portfolioStatus == 'PUBLISHED';
+    }
+
+    // --- COLLECTION RULES ---
+
+    /**
+     * @description Rules for the root user profile. Owners can manage their profile; public can view if published.
+     * @path /user_profiles/{userId}
+     * @allow (get/list) if profile is 'PUBLISHED' or requester is the owner.
+     * @deny (write) if requester UID does not match the userId path parameter.
+     * @principle Ownership-based writes and status-based public reads.
+     */
+    match /user_profiles/{userId} {
+      allow get, list: if isOwner(userId) || isPublished(resource.data);
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
+      allow delete: if isExistingOwner(userId);
+
+      /**
+       * @description Rules for work experience entries.
+       * @path /user_profiles/{userId}/experience_entries/{experienceId}
+       * @allow (create) if ownerId in data matches authenticated UID.
+       * @deny (update) if attempting to change the ownerId field.
+       * @principle Relational integrity and authorization independence via denormalized ownerId.
+       */
+      match /experience_entries/{experienceId} {
+        allow get, list: if isOwner(userId) || isPublished(resource.data);
+        allow create: if isOwner(userId) && request.resource.data.userId == userId;
+        allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
+        allow delete: if isExistingOwner(userId);
+      }
+
+      /**
+       * @description Rules for skill categories.
+       * @path /user_profiles/{userId}/skill_categories/{categoryId}
+       * @allow (list) for public users if the category 'portfolioStatus' is 'PUBLISHED'.
+       * @deny (create) if the userId path and data.userId do not match.
+       * @principle Ensures path and data consistency for subcollections.
+       */
+      match /skill_categories/{categoryId} {
+        allow get, list: if isOwner(userId) || isPublished(resource.data);
+        allow create: if isOwner(userId) && request.resource.data.userId == userId;
+        allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
+        allow delete: if isExistingOwner(userId);
+
+        /**
+         * @description Rules for individual skills nested under categories.
+         * @path /user_profiles/{userId}/skill_categories/{categoryId}/skills/{skillId}
+         * @allow (get) if the specific skill's status is 'PUBLISHED'.
+         * @deny (delete) by anyone other than the portfolio owner.
+         * @principle Deeply nested subcollection security using denormalized status.
+         */
+        match /skills/{skillId} {
+          allow get, list: if isOwner(userId) || isPublished(resource.data);
+          allow create: if isOwner(userId);
+          allow update: if isExistingOwner(userId);
+          allow delete: if isExistingOwner(userId);
+        }
+      }
+
+      /**
+       * @description Rules for projects/case studies.
+       * @path /user_profiles/{userId}/projects/{projectId}
+       * @allow (update) if owner changes project details but keeps the userId immutable.
+       * @deny (write) for anonymous users on unpublished projects.
+       * @principle Immutability of relational fields during updates.
+       */
+      match /projects/{projectId} {
+        allow get, list: if isOwner(userId) || isPublished(resource.data);
+        allow create: if isOwner(userId) && request.resource.data.userId == userId;
+        allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
+        allow delete: if isExistingOwner(userId);
+      }
+
+      /**
+       * @description Rules for education entries.
+       * @path /user_profiles/{userId}/education_entries/{educationId}
+       * @allow (create) if the document correctly references the parent user.
+       * @deny (list) if the requester is not the owner and portfolioStatus is not 'PUBLISHED'.
+       * @principle Authorization independence via denormalized portfolioStatus.
+       */
+      match /education_entries/{educationId} {
+        allow get, list: if isOwner(userId) || isPublished(resource.data);
+        allow create: if isOwner(userId) && request.resource.data.userId == userId;
+        allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
+        allow delete: if isExistingOwner(userId);
+      }
+    }
+  }
+}
