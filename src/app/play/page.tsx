@@ -20,7 +20,6 @@ export default function PlayPage() {
         </div>
 
         <div className="relative py-32 border border-border/10 overflow-hidden rounded-[4rem] bg-muted/5 flex flex-col items-center justify-center text-center group">
-          {/* Subtle Background Pattern */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
           
           <div className="relative z-10 space-y-10 px-6">
@@ -38,7 +37,7 @@ export default function PlayPage() {
                 </p>
                 <div className="flex items-center justify-center gap-4 pt-4">
                   <span className="h-px w-12 bg-border" />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.5em] opacity-40">Coming Soon</span>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.5em] opacity-40">In Progress</span>
                   <span className="h-px w-12 bg-border" />
                 </div>
               </div>

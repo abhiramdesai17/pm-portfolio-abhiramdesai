@@ -88,7 +88,7 @@ export default function Home() {
                  <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground/60">Experience</span>
               </div>
               
-              <div className="flex flex-wrap items-center justify-center gap-px max-w-lg">
+              <div className="flex flex-wrap items-center justify-center gap-[4px] max-w-lg">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -97,7 +97,7 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative h-14 w-20 md:w-24 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
+                      className="group relative h-14 w-16 md:w-20 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
                     >
                       {logo?.imageUrl && (
                         <Image 
@@ -151,7 +151,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
           <div className="mb-20 space-y-4 text-center">
              <span className="text-[10px] font-bold uppercase tracking-[0.6em] text-muted-foreground">Capabilities</span>
-            <h2 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter">Core Expertise</h2>
+            <h2 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter text-center">Core Expertise</h2>
           </div>
           <SkillMatrix />
         </div>
