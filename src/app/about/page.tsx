@@ -177,7 +177,7 @@ export default function AboutPage() {
       </section>
 
       {/* 6. Sports in the US: MLC & Legends */}
-      <section className="py-32 border-t border-border/10 bg-background/5">
+      <section className="py-32 border-t border-border/10 bg-muted/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2 space-y-8">
