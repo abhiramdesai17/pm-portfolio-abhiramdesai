@@ -42,7 +42,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. Roots: Bangalore & Cricket */}
-      <section className="py-32 border-t border-border/10">
+      <section className="py-32 border-t border-border/10 bg-background">
         <div className="max-w-7xl auto px-4 sm:px-6 lg:px-8">
           <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden mb-16 shadow-2xl">
             {getImg("about-bangalore")?.imageUrl && (
@@ -71,7 +71,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="lg:col-span-5">
-              <div className="p-12 bg-muted/30 rounded-[3rem] border border-border/50 h-full flex flex-col justify-center">
+              <div className="p-12 bg-muted/10 rounded-[3rem] border border-border/50 h-full flex flex-col justify-center">
                 <Trophy className="text-primary mb-6" size={40} strokeWidth={1} />
                 <h3 className="text-xl font-bold mb-4 italic">Athletic Discipline</h3>
                 <p className="text-sm font-light text-muted-foreground leading-relaxed">
@@ -84,7 +84,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. The COVID Pivot: Creative Awakening */}
-      <section className="py-32 bg-muted/10">
+      <section className="py-32 bg-muted/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
              <div className="relative aspect-square rounded-[4rem] overflow-hidden shadow-xl">
@@ -149,7 +149,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Amazon & Team Outings */}
-      <section className="py-32 border-t border-border/10">
+      <section className="py-32 border-t border-border/10 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
             {getImg("about-nyc-team")?.imageUrl && (
@@ -224,17 +224,17 @@ export default function AboutPage() {
       </section>
 
       {/* 7. Adrenaline & Travel */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-background">
         <div className="grid lg:grid-cols-12 gap-16">
           <div className="lg:col-span-4 space-y-8">
-            <div className="p-8 bg-muted/20 rounded-[2rem] border border-border/10">
+            <div className="p-8 bg-muted/10 rounded-[2rem] border border-border/10">
               <Palmtree className="text-primary mb-6" size={32} />
               <h3 className="text-2xl font-bold mb-4 tracking-tight">The Nomad Heart</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
                 I have a dream of visiting every National Park and every state in the US. From the New England coast to the Utah deserts, travel is where I recharge my creative batteries.
               </p>
             </div>
-            <div className="p-8 bg-muted/20 rounded-[2rem] border border-border/10">
+            <div className="p-8 bg-muted/10 rounded-[2rem] border border-border/10">
               <Heart className="text-red-500 mb-6" size={32} />
               <h3 className="text-2xl font-bold mb-4 tracking-tight">Fitness Freak</h3>
               <p className="text-muted-foreground font-light leading-relaxed">
@@ -262,7 +262,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-20 flex flex-wrap gap-3 justify-center">
               {["New England", "Chicago", "Miami", "Texas", "Seattle", "Arizona", "Utah", "San Francisco", "San Diego"].map(city => (
-                <span key={city} className="px-6 py-2 rounded-full border border-border/50 text-[10px] uppercase font-bold tracking-widest bg-muted/10">
+                <span key={city} className="px-6 py-2 rounded-full border border-border/50 text-[10px] uppercase font-bold tracking-widest bg-muted/5">
                   {city}
                 </span>
               ))}
