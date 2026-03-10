@@ -8,7 +8,7 @@ export default function PlayPage() {
       <Navbar />
       
       <section className="px-4 sm:px-6 lg:px-8 py-20 max-w-7xl mx-auto min-h-[70vh]">
-        <div className="max-w-4xl mb-24 text-center md:text-left">
+        <div className="max-w-4xl mb-24 text-center md:text-left mx-auto md:mx-0">
           <Badge className="mb-4 bg-accent/20 text-accent border-accent uppercase tracking-widest text-[10px] px-4 py-1 font-bold">Play</Badge>
           <h1 className="text-6xl md:text-9xl font-headline font-normal text-primary mb-8 tracking-tighter leading-none">
             Outside the <br />
