@@ -88,7 +88,7 @@ export default function Home() {
                  <span className="text-[10px] font-bold uppercase tracking-[0.4em]">Experience</span>
               </div>
               
-              <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+              <div className="flex flex-wrap items-center justify-center gap-0.5">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -97,7 +97,7 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative h-14 w-28 md:w-36 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
+                      className="group relative h-14 w-24 md:w-32 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
                     >
                       {logo?.imageUrl && (
                         <Image 
@@ -162,7 +162,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-7xl font-headline font-bold tracking-tight max-w-2xl leading-[0.9] text-balance">Let&apos;s build the future together.</h2>
+              <h2 className="text-4xl md:text-7xl font-headline font-bold tracking tight max-w-2xl leading-[0.9] text-balance">Let&apos;s build the future together.</h2>
             </div>
             <div className="flex flex-col items-center md:items-end gap-6">
               <div className="flex flex-col items-center md:items-end gap-4 w-full md:w-auto">
