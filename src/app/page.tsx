@@ -1,5 +1,3 @@
-
-
 import { Navbar } from "@/components/Navbar";
 import { WorkCard } from "@/components/WorkCard";
 import { SkillMatrix } from "@/components/SkillMatrix";
@@ -87,7 +85,7 @@ export default function Home() {
 
             <div className="space-y-6 pt-4 flex flex-col items-center">
               <span className="text-sm font-bold uppercase tracking-[0.4em] text-muted-foreground/60">Experience</span>
-              <div className="flex flex-wrap items-center justify-center gap-6">
+              <div className="flex flex-wrap items-center justify-center gap-8">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -96,15 +94,17 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative flex h-20 w-20 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 border border-border/40 hover:border-border overflow-hidden bg-background"
+                      className="group relative flex h-24 w-24 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 border border-border/40 hover:border-border overflow-hidden bg-white shadow-xl"
                     >
                       {logo?.imageUrl && logo.imageUrl !== "" && (
-                        <Image 
-                          src={logo.imageUrl} 
-                          alt={exp.name} 
-                          fill
-                          className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
-                        />
+                        <div className="relative h-14 w-14">
+                          <Image 
+                            src={logo.imageUrl} 
+                            alt={exp.name} 
+                            fill
+                            className="object-contain transition-all duration-500"
+                          />
+                        </div>
                       )}
                     </a>
                   );
