@@ -97,7 +97,7 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative h-14 w-24 md:w-32 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
+                      className="group relative h-14 w-20 md:w-28 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
                     >
                       {logo?.imageUrl && (
                         <Image 
