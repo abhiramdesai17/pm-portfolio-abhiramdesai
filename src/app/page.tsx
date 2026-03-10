@@ -102,7 +102,7 @@ export default function Home() {
                           src={logo.imageUrl} 
                           alt={exp.name} 
                           fill
-                          className="object-contain transition-all duration-500 grayscale hover:grayscale-0 opacity-40 hover:opacity-100 p-1"
+                          className="object-contain transition-all duration-500 opacity-100 hover:scale-105 p-1"
                         />
                       )}
                     </a>
