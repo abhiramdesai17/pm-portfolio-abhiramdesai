@@ -23,6 +23,7 @@ export function DesAIChatbot() {
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // Auto-scroll to bottom whenever messages or loading state changes
   useEffect(() => {
     if (scrollRef.current) {
       const scrollContainer = scrollRef.current.querySelector('[data-radix-scroll-area-viewport]');
@@ -33,7 +34,7 @@ export function DesAIChatbot() {
         });
       }
     }
-  }, [messages, isOpen, isLoading]);
+  }, [messages, isLoading, isOpen]);
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -41,25 +42,26 @@ export function DesAIChatbot() {
     const currentInput = input;
     const userMessage: Message = { role: "user", text: currentInput };
     
-    // Capture current messages for history before updating local state
-    const historyBeforeCurrent = [...messages];
+    // Capture the current history to pass to the AI
+    const historyToPass = [...messages];
     
-    // Update local messages immediately for UX
+    // Update UI immediately with user's message
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setIsLoading(true);
 
     try {
-      // Pass the previous history + newest user input to the AI flow
+      // Call the AI flow with full conversation history and the new input
       const result = await desAIChat({
-        messages: historyBeforeCurrent,
+        messages: historyToPass,
         userInput: currentInput
       });
       
+      // Append AI's response to the conversation
       setMessages((prev) => [...prev, { role: "model", text: result.response }]);
     } catch (error) {
       console.error("Chat error:", error);
-      setMessages((prev) => [...prev, { role: "model", text: "I'm having a little trouble connecting right now. Please try again or reach out to Abhiram directly!" }]);
+      setMessages((prev) => [...prev, { role: "model", text: "I encountered a minor glitch. Please try again or email Abhiram at abhiramdesai.99@gmail.com!" }]);
     } finally {
       setIsLoading(false);
     }

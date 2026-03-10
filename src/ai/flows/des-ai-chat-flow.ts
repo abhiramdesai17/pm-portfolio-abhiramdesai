@@ -69,6 +69,7 @@ const desAIChatFlow = ai.defineFlow(
   async (input) => {
     const { messages, userInput } = input;
 
+    // Correctly map history to Genkit's format (alternating user/model messages)
     const history = messages.map(m => ({
       role: m.role,
       content: [{ text: m.text }]
