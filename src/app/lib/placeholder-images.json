@@ -76,37 +76,37 @@
     {
       "id": "project-postmates",
       "description": "Postmates Plus project background",
-      "imageUrl": "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "https://picsum.photos/seed/postmates/1200/600",
       "imageHint": "logistics delivery"
     },
     {
       "id": "project-mental-health",
       "description": "Mental Health Chatbot project background",
-      "imageUrl": "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=2064&auto=format&fit=crop",
+      "imageUrl": "https://picsum.photos/seed/mentalhealth/1200/600",
       "imageHint": "ai brain"
     },
     {
       "id": "project-django",
       "description": "Django Real Estate project background",
-      "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop",
+      "imageUrl": "https://picsum.photos/seed/realestate/1200/600",
       "imageHint": "modern architecture"
     },
     {
       "id": "project-spotify",
       "description": "Spotify ETL project background",
-      "imageUrl": "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "https://picsum.photos/seed/spotify/1200/600",
       "imageHint": "music digital data"
     },
     {
       "id": "project-ocr",
       "description": "OCR Tool project background",
-      "imageUrl": "https://images.unsplash.com/photo-1568027762-72036f2619d7?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "https://picsum.photos/seed/ocr/1200/600",
       "imageHint": "scanning documents"
     },
     {
       "id": "project-credit",
       "description": "Credit Default project background",
-      "imageUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "https://picsum.photos/seed/finance/1200/600",
       "imageHint": "finance analysis"
     },
     {
