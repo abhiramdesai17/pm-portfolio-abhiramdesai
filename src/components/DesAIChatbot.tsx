@@ -38,15 +38,20 @@ export function DesAIChatbot() {
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
 
-    const userMessage: Message = { role: "user", text: input };
-    setMessages((prev) => [...prev, userMessage]);
+    const currentInput = input;
+    const userMessage: Message = { role: "user", text: currentInput };
+    
+    // Update local messages immediately for UX
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
     setInput("");
     setIsLoading(true);
 
     try {
+      // Pass the current state (updatedMessages) to the AI flow
       const result = await desAIChat({
-        messages: messages,
-        userInput: input
+        messages: messages, // History before current input
+        userInput: currentInput
       });
       
       setMessages((prev) => [...prev, { role: "model", text: result.response }]);

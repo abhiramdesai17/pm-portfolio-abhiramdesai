@@ -95,14 +95,14 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative h-16 w-20 md:w-24 transition-all hover:scale-110 active:scale-95 flex items-center justify-center"
+                      className="group relative h-24 w-32 md:w-40 transition-all hover:scale-110 active:scale-95 flex items-center justify-center"
                     >
                       {logo?.imageUrl && (
                         <Image 
                           src={logo.imageUrl} 
                           alt={exp.name} 
                           fill
-                          className="object-contain transition-all duration-500 opacity-100 hover:scale-105 p-1"
+                          className="object-contain transition-all duration-500 opacity-100 p-1"
                         />
                       )}
                     </a>
