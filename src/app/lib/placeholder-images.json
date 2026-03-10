@@ -136,25 +136,25 @@
     {
       "id": "logo-amazon",
       "description": "Amazon Logo",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "imageUrl": "/amazon-logo.png",
       "imageHint": "amazon logo"
     },
     {
       "id": "logo-philips",
       "description": "Philips Logo",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Philips_logo_new.svg",
+      "imageUrl": "/philips-logo.png",
       "imageHint": "philips logo"
     },
     {
       "id": "logo-northeastern",
       "description": "Northeastern University Logo",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Northeastern_wordmark.svg",
+      "imageUrl": "/neu-logo.png",
       "imageHint": "university logo"
     },
     {
       "id": "logo-accenture",
       "description": "Accenture Logo",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg",
+      "imageUrl": "/accenture-logo.png",
       "imageHint": "accenture logo"
     }
   ]

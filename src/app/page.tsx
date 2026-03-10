@@ -96,15 +96,14 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative flex h-16 w-16 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 border border-border/40 hover:border-border overflow-hidden bg-background"
+                      className="group relative flex h-20 w-20 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 border border-border/40 hover:border-border overflow-hidden bg-background"
                     >
                       {logo?.imageUrl && logo.imageUrl !== "" && (
                         <Image 
                           src={logo.imageUrl} 
                           alt={exp.name} 
-                          width={40} 
-                          height={40} 
-                          className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                          fill
+                          className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
                         />
                       )}
                     </a>
