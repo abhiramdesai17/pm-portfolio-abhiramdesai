@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -8,7 +9,7 @@ interface WorkCardProps {
   title: string;
   description: string;
   tags: string[];
-  imageUrl: string;
+  imageUrl: string | null;
   slug: string;
   metrics?: string;
 }
@@ -21,7 +22,7 @@ export function WorkCard({ title, description, tags, imageUrl, slug, metrics }: 
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        {imageUrl && (
+        {imageUrl && imageUrl !== "" && (
           <Image
             src={imageUrl}
             alt={title}

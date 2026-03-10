@@ -1,4 +1,5 @@
 
+
 import { Navbar } from "@/components/Navbar";
 import { WorkCard } from "@/components/WorkCard";
 import { SkillMatrix } from "@/components/SkillMatrix";
@@ -97,7 +98,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="group relative flex h-16 w-16 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 border border-border/40 hover:border-border overflow-hidden bg-background"
                     >
-                      {logo?.imageUrl && (
+                      {logo?.imageUrl && logo.imageUrl !== "" && (
                         <Image 
                           src={logo.imageUrl} 
                           alt={exp.name} 
@@ -132,9 +133,16 @@ export default function Home() {
         </div>
         
         <div className="grid grid-cols-1 gap-12 max-w-7xl mx-auto">
-          {projects.map((project) => (
-            <WorkCard key={project.slug} {...project} imageUrl={PlaceHolderImages.find(img => img.id === project.imageId)?.imageUrl || ""} />
-          ))}
+          {projects.map((project) => {
+            const imageUrl = PlaceHolderImages.find(img => img.id === project.imageId)?.imageUrl;
+            return (
+              <WorkCard 
+                key={project.slug} 
+                {...project} 
+                imageUrl={imageUrl || null} 
+              />
+            );
+          })}
         </div>
       </section>
 

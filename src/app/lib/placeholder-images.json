@@ -1,15 +1,16 @@
+
 {
   "placeholderImages": [
     {
       "id": "hero-portrait",
       "description": "Professional portrait for the home page hero section",
-      "imageUrl": "/headshot.jpg",
+      "imageUrl": "/amazon.jpg",
       "imageHint": "professional portrait"
     },
     {
       "id": "about-headshot",
       "description": "Primary headshot for the top of the About page",
-      "imageUrl": "/amazon.jpg",
+      "imageUrl": "/bos-seaport.jpeg",
       "imageHint": "portrait photography"
     },
     {
@@ -75,37 +76,37 @@
     {
       "id": "project-postmates",
       "description": "Postmates Plus project background",
-      "imageUrl": "https://picsum.photos/seed/postmates/1200/600",
+      "imageUrl": "/Postmates_Logo.jpg",
       "imageHint": "logistics delivery"
     },
     {
       "id": "project-mental-health",
       "description": "Mental Health Chatbot project background",
-      "imageUrl": "https://picsum.photos/seed/mentalhealth/1200/600",
+      "imageUrl": "/mental-health.jpg",
       "imageHint": "ai brain"
     },
     {
       "id": "project-django",
       "description": "Django Real Estate project background",
-      "imageUrl": "https://picsum.photos/seed/realestate/1200/600",
+      "imageUrl": "/real-estate.jpg",
       "imageHint": "modern architecture"
     },
     {
       "id": "project-spotify",
       "description": "Spotify ETL project background",
-      "imageUrl": "https://picsum.photos/seed/spotify/1200/600",
+      "imageUrl": "/spotify.jpg",
       "imageHint": "music digital data"
     },
     {
       "id": "project-ocr",
       "description": "OCR Tool project background",
-      "imageUrl": "https://picsum.photos/seed/ocr/1200/600",
+      "imageUrl": "/picture-to-text.jpg",
       "imageHint": "scanning documents"
     },
     {
       "id": "project-credit",
       "description": "Credit Default project background",
-      "imageUrl": "https://picsum.photos/seed/finance/1200/600",
+      "imageUrl": "/credit-card.jpg",
       "imageHint": "finance analysis"
     },
     {
