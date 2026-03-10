@@ -273,15 +273,13 @@ export default function AboutPage() {
 
       {/* Footer CTA */}
       <footer className="py-32 border-t border-border/10 bg-muted/5">
-        <div className="max-w-7xl mx-auto px-4 text-center space-y-12">
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-6xl font-headline font-bold tracking-tight">Let&apos;s start a story together.</h2>
-            <p className="text-xl text-muted-foreground font-light">Always open to creative brainstorming or a game of cricket.</p>
-          </div>
-          <div className="flex justify-center gap-6">
-            <Link href="/" className="px-12 py-5 bg-foreground text-background rounded-full font-bold transition-all hover:scale-105">View Work</Link>
-            <Link href="mailto:abhiramdesai.99@gmail.com" className="px-12 py-5 border-2 border-foreground rounded-full font-bold transition-all hover:bg-foreground hover:text-background">Email Me</Link>
-          </div>
+        <div className="space-y-4">
+          <h2 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-center">Let&apos;s start a story together.</h2>
+          <p className="text-xl text-muted-foreground font-light text-center">Always open to creative brainstorming or a game of cricket.</p>
+        </div>
+        <div className="flex justify-center gap-6 pt-12">
+          <Link href="/" className="px-12 py-5 bg-foreground text-background rounded-full font-bold transition-all hover:scale-105">View Work</Link>
+          <Link href="mailto:abhiramdesai.99@gmail.com" className="px-12 py-5 border-2 border-foreground rounded-full font-bold transition-all hover:bg-foreground hover:text-background">Email Me</Link>
         </div>
       </footer>
     </div>
