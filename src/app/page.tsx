@@ -71,7 +71,7 @@ export default function Home() {
       <Navbar />
       
       {/* 1. Intro Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-24 max-w-full mx-auto text-center">
+      <section className="px-4 sm:px-6 lg:px-8 pt-24 pb-24 max-w-full mx-auto text-center flex flex-col items-center">
         <div className="flex flex-col items-center gap-6">
           <h1 className="text-5xl md:text-[7rem] font-headline font-normal tracking-tight text-foreground leading-none">
             Hi, I&apos;m Abhiram!

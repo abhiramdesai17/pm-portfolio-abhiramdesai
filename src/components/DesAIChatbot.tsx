@@ -42,8 +42,8 @@ export function DesAIChatbot() {
     const currentInput = input;
     const userMessage: Message = { role: "user", text: currentInput };
     
-    // Capture the current history to pass to the AI
-    const historyToPass = [...messages];
+    // Capture the history to pass to the AI flow
+    const historyBefore = [...messages];
     
     // Update UI immediately with user's message
     setMessages((prev) => [...prev, userMessage]);
@@ -51,13 +51,13 @@ export function DesAIChatbot() {
     setIsLoading(true);
 
     try {
-      // Call the AI flow with full conversation history and the new input
+      // Pass full conversation history to the AI flow for multi-turn support
       const result = await desAIChat({
-        messages: historyToPass,
+        messages: historyBefore,
         userInput: currentInput
       });
       
-      // Append AI's response to the conversation
+      // Append AI's response to the conversation history
       setMessages((prev) => [...prev, { role: "model", text: result.response }]);
     } catch (error) {
       console.error("Chat error:", error);
