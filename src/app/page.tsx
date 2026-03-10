@@ -95,7 +95,7 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative h-10 w-14 md:w-16 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
+                      className="group relative h-10 w-12 md:w-14 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
                     >
                       {logo?.imageUrl && (
                         <Image 
@@ -160,7 +160,7 @@ export default function Home() {
         <div className="max-w-7xl auto px-4 sm:px-6 lg:px-8 space-y-20">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
             <div className="space-y-8">
-              <h2 className="text-4xl md:text-7xl font-headline font-bold tracking tight max-w-2xl leading-[0.9] text-balance">Let&apos;s build the future together.</h2>
+              <h2 className="text-4xl md:text-7xl font-headline font-bold tracking tight max-w-2xl leading-[0.9] text-balance text-left">Let&apos;s build the future together.</h2>
             </div>
             <div className="flex flex-col items-center md:items-end gap-6">
               <div className="flex flex-col items-center md:items-end gap-4 w-full md:w-auto">
