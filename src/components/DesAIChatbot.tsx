@@ -41,16 +41,18 @@ export function DesAIChatbot() {
     const currentInput = input;
     const userMessage: Message = { role: "user", text: currentInput };
     
+    // Capture current messages for history before updating local state
+    const historyBeforeCurrent = [...messages];
+    
     // Update local messages immediately for UX
-    const updatedMessages = [...messages, userMessage];
-    setMessages(updatedMessages);
+    setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setIsLoading(true);
 
     try {
-      // Pass the current state (updatedMessages) to the AI flow
+      // Pass the previous history + newest user input to the AI flow
       const result = await desAIChat({
-        messages: messages, // History before current input
+        messages: historyBeforeCurrent,
         userInput: currentInput
       });
       
