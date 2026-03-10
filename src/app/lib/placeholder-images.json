@@ -15,7 +15,7 @@
     {
       "id": "about-bangalore",
       "description": "Image representing Bangalore roots",
-      "imageUrl": "/blr.jpg",
+      "imageUrl": "/blr-airport.jpeg",
       "imageHint": "city life bangalore"
     },
     {
@@ -33,19 +33,19 @@
     {
       "id": "about-neu-cricket",
       "description": "Northeastern Cricket Team action shot",
-      "imageUrl": "/cricket-win.jpg",
+      "imageUrl": "/cricket-win.jpeg",
       "imageHint": "cricket match"
     },
     {
       "id": "about-shane-bond",
       "description": "Photo with Shane Bond",
-      "imageUrl": "/shane-bond.jpg",
+      "imageUrl": "/shane-bond.jpeg",
       "imageHint": "athlete portrait"
     },
     {
       "id": "about-ross-taylor",
       "description": "Photo with Ross Taylor",
-      "imageUrl": "/ross-taylor.jpg",
+      "imageUrl": "/ross-taylor.jpeg",
       "imageHint": "athlete portrait"
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": "about-travel-1",
       "description": "Travel highlight 1",
-      "imageUrl": "/storm-king-2.jpg",
+      "imageUrl": "/storm-king-2.jpeg",
       "imageHint": "national park"
     },
     {
@@ -69,7 +69,7 @@
     {
       "id": "about-travel-3",
       "description": "Travel highlight 3",
-      "imageUrl": "/bean.jpg",
+      "imageUrl": "/sea-kayak.jpg",
       "imageHint": "arizona desert"
     },
     {

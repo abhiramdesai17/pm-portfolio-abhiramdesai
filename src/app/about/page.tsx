@@ -42,11 +42,27 @@ export default function AboutPage() {
       </section>
 
       {/* 2. Roots: Bangalore & Cricket */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-border/10">
-        <div className="grid lg:grid-cols-12 gap-16 items-start">
-          <div className="lg:col-span-7 space-y-12">
-            <div className="space-y-6">
-              <h2 className="text-4xl font-headline font-bold">The Silicon Valley of India</h2>
+      <section className="py-32 border-t border-border/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden mb-16 shadow-2xl">
+            {getImg("about-bangalore")?.imageUrl && (
+              <Image
+                src={getImg("about-bangalore")!.imageUrl}
+                alt="Bangalore Influence"
+                fill
+                className="object-cover"
+                data-ai-hint="city life bangalore"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+            <div className="absolute bottom-10 left-10 text-white">
+              <p className="text-[10px] font-bold uppercase tracking-[0.4em] mb-2">Roots</p>
+              <h3 className="text-3xl font-bold">Bangalore: The Silicon Valley of India</h3>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-16 items-start">
+            <div className="lg:col-span-7 space-y-6">
               <p className="text-lg font-light leading-relaxed text-muted-foreground">
                 I grew up in Bangalore, known as the &quot;Silicon Valley&quot; of India. With a family background in engineering, it was almost an inevitable &quot;fall back&quot; option. I studied electrical engineering and stepped into the world of development and analysis right after graduation.
               </p>
@@ -54,28 +70,14 @@ export default function AboutPage() {
                 But my heart belonged to a different field since the age of 4. Cricket wasn&apos;t just a game; it was my life. I represented my school, university, and played various levels of age-group cricket in Karnataka, my home state, before deciding to channel that competitive energy into my academics.
               </p>
             </div>
-            <div className="relative aspect-video rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
-               {getImg("about-bangalore")?.imageUrl && (
-                 <Image
-                    src={getImg("about-bangalore")!.imageUrl}
-                    alt="Bangalore Influence"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="city life bangalore"
-                  />
-               )}
-                <div className="absolute bottom-6 left-6 bg-background/80 backdrop-blur-md px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">
-                  Bangalore: Influential Roots
-                </div>
-            </div>
-          </div>
-          <div className="lg:col-span-5 space-y-8">
-            <div className="p-12 bg-muted/30 rounded-[3rem] border border-border/50">
-              <Trophy className="text-primary mb-6" size={40} strokeWidth={1} />
-              <h3 className="text-xl font-bold mb-4 italic">Athletic Discipline</h3>
-              <p className="text-sm font-light text-muted-foreground leading-relaxed">
-                The grit required to open an innings at 6 AM in the cold Bangalore mornings translates directly to how I handle high-stakes product roadmaps today.
-              </p>
+            <div className="lg:col-span-5">
+              <div className="p-12 bg-muted/30 rounded-[3rem] border border-border/50 h-full flex flex-col justify-center">
+                <Trophy className="text-primary mb-6" size={40} strokeWidth={1} />
+                <h3 className="text-xl font-bold mb-4 italic">Athletic Discipline</h3>
+                <p className="text-sm font-light text-muted-foreground leading-relaxed">
+                  The grit required to open an innings at 6 AM in the cold Bangalore mornings translates directly to how I handle high-stakes product roadmaps today.
+                </p>
+              </div>
             </div>
           </div>
         </div>
