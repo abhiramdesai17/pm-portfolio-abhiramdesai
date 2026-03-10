@@ -31,14 +31,14 @@ export default function PlayPage() {
                </div>
             </div>
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight">Curating the Artifacts</h2>
+              <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight">Under Construction</h2>
               <div className="space-y-4">
                 <p className="text-lg md:text-xl text-muted-foreground font-light max-w-xl mx-auto leading-relaxed">
-                  I am currently sorting through my photography archives and personal &quot;side quests&quot; to bring you a curated look at what keeps me inspired. 
+                  I am currently sorting through my photography archives and personal &quot;side quests&quot; to bring you a curated look at what keeps me inspired. Check back soon!
                 </p>
                 <div className="flex items-center justify-center gap-4 pt-4">
                   <span className="h-px w-12 bg-border" />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.5em] opacity-40">Development in Progress</span>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.5em] opacity-40">Coming Soon</span>
                   <span className="h-px w-12 bg-border" />
                 </div>
               </div>

@@ -43,7 +43,7 @@ export default function AboutPage() {
 
       {/* 2. Roots: Bangalore & Cricket */}
       <section className="py-32 border-t border-border/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl auto px-4 sm:px-6 lg:px-8">
           <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden mb-16 shadow-2xl">
             {getImg("about-bangalore")?.imageUrl && (
               <Image
@@ -177,7 +177,7 @@ export default function AboutPage() {
       </section>
 
       {/* 6. Sports in the US: MLC & Legends */}
-      <section className="py-32 border-t border-border/10 bg-muted/5">
+      <section className="py-32 border-t border-border/10 bg-muted/10 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2 space-y-8">

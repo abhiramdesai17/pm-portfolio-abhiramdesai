@@ -88,7 +88,7 @@ export default function Home() {
                  <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground/60">Experience</span>
               </div>
               
-              <div className="flex flex-wrap items-center justify-center gap-[4px]">
+              <div className="flex flex-wrap items-center justify-center gap-[2px]">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
