@@ -177,24 +177,24 @@ export default function AboutPage() {
       </section>
 
       {/* 6. Sports in the US: MLC & Legends */}
-      <section className="py-32 bg-primary text-primary-foreground overflow-hidden">
+      <section className="py-32 border-t border-border/10 bg-muted/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2 space-y-8">
               <div className="flex items-center gap-4">
-                <Trophy size={48} strokeWidth={1} />
+                <Trophy size={48} strokeWidth={1} className="text-primary" />
                 <h2 className="text-4xl md:text-5xl font-headline font-bold">Continuing the Passion</h2>
               </div>
-              <p className="text-xl font-light opacity-90 leading-relaxed">
+              <p className="text-xl font-light text-muted-foreground leading-relaxed">
                 In the US, I didn&apos;t leave cricket behind. I captained Northeastern&apos;s cricket team and had the surreal opportunity to be part of the Major League Cricket training camp with the Seattle Orcas in July 2024.
               </p>
               <div className="flex flex-col gap-4">
-                <p className="text-sm font-bold uppercase tracking-[0.2em] opacity-60">Training with Legends:</p>
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground/60">Training with Legends:</p>
                 <div className="flex gap-6">
-                  <a href="https://en.wikipedia.org/wiki/Shane_Bond" target="_blank" className="group flex items-center gap-2 text-sm font-bold hover:underline decoration-accent underline-offset-4">
+                  <a href="https://en.wikipedia.org/wiki/Shane_Bond" target="_blank" className="group flex items-center gap-2 text-sm font-bold text-foreground hover:underline decoration-primary underline-offset-4">
                     Shane Bond <ExternalLink size={14} className="opacity-50 group-hover:opacity-100 transition-opacity" />
                   </a>
-                  <a href="https://en.wikipedia.org/wiki/Ross_Taylor" target="_blank" className="group flex items-center gap-2 text-sm font-bold hover:underline decoration-accent underline-offset-4">
+                  <a href="https://en.wikipedia.org/wiki/Ross_Taylor" target="_blank" className="group flex items-center gap-2 text-sm font-bold text-foreground hover:underline decoration-primary underline-offset-4">
                     Ross Taylor <ExternalLink size={14} className="opacity-50 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </div>
