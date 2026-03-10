@@ -10,67 +10,67 @@
     {
       "id": "about-headshot",
       "description": "Primary headshot for the top of the About page",
-      "imageUrl": "https://picsum.photos/seed/headshot/800/1000",
+      "imageUrl": "/amazon.jpg",
       "imageHint": "portrait photography"
     },
     {
       "id": "about-bangalore",
       "description": "Image representing Bangalore roots",
-      "imageUrl": "https://picsum.photos/seed/bangalore/800/600",
+      "imageUrl": "/blr.jpg",
       "imageHint": "city life bangalore"
     },
     {
       "id": "about-creative-covid",
       "description": "Image of building something creative during COVID",
-      "imageUrl": "https://picsum.photos/seed/creative/800/600",
+      "imageUrl": "/home.jpg",
       "imageHint": "creative workspace midnight"
     },
     {
       "id": "about-boston",
       "description": "Boston / Northeastern University landscape",
-      "imageUrl": "https://picsum.photos/seed/boston/800/600",
+      "imageUrl": "/grad.jpg",
       "imageHint": "boston skyline"
     },
     {
       "id": "about-neu-cricket",
       "description": "Northeastern Cricket Team action shot",
-      "imageUrl": "https://picsum.photos/seed/cricket-neu/800/600",
+      "imageUrl": "/cricket-win.jpg",
       "imageHint": "cricket match"
     },
     {
       "id": "about-shane-bond",
       "description": "Photo with Shane Bond",
-      "imageUrl": "https://picsum.photos/seed/shane-bond/600/800",
+      "imageUrl": "/shane-bond.jpg",
       "imageHint": "athlete portrait"
     },
     {
       "id": "about-ross-taylor",
       "description": "Photo with Ross Taylor",
-      "imageUrl": "https://picsum.photos/seed/ross-taylor/600/800",
+      "imageUrl": "/ross-taylor.jpg",
       "imageHint": "athlete portrait"
     },
     {
       "id": "about-nyc-team",
       "description": "Amazon team outing in NYC Times Square",
-      "imageUrl": "https://picsum.photos/seed/nyc-team/1000/600",
+      "imageUrl": "/amazon-ny.jpg",
       "imageHint": "times square rainy"
     },
     {
       "id": "about-travel-1",
       "description": "Travel highlight 1",
-      "imageUrl": "https://picsum.photos/seed/travel1/600/800",
+      "imageUrl": "/storm-king-2.jpg",
       "imageHint": "national park"
     },
     {
       "id": "about-travel-2",
       "description": "Travel highlight 2",
-      "imageUrl": "https://picsum.photos/seed/travel2/600/800",
+      "imageUrl": "/tahoe-2.jpeg",
       "imageHint": "beach coast"
     },
     {
       "id": "about-travel-3",
       "description": "Travel highlight 3",
-      "imageUrl": "https://picsum.photos/seed/travel3/600/800",
+      "imageUrl": "/bean.jpg",
       "imageHint": "arizona desert"
     },
     {
