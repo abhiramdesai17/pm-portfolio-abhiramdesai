@@ -83,13 +83,12 @@ export default function Home() {
               opportunities and rapidly prototyping end-to-end solutions.
             </p>
 
-            <div className="space-y-10 pt-4 flex flex-col items-center">
-              <div className="flex items-center gap-4 text-muted-foreground/60">
+            <div className="space-y-8 pt-4 flex flex-col items-center">
+              <div className="text-muted-foreground/60 text-center">
                  <span className="text-[10px] font-bold uppercase tracking-[0.4em]">Experience</span>
-                 <div className="h-px w-12 bg-border" />
               </div>
               
-              <div className="flex flex-wrap items-center justify-center gap-10">
+              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -98,7 +97,7 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative h-14 w-40 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
+                      className="group relative h-14 w-32 md:w-40 transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
                     >
                       {logo?.imageUrl && (
                         <Image 
