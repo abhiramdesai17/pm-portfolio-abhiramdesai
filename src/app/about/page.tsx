@@ -155,7 +155,7 @@ export default function AboutPage() {
             {getImg("about-nyc-team")?.imageUrl && (
               <Image
                 src={getImg("about-nyc-team")!.imageUrl}
-                alt="Amazon Team Outing NYC"
+                alt="Amazon team outing in NYC Times Square"
                 fill
                 className="object-cover"
                 data-ai-hint="times square rainy"
