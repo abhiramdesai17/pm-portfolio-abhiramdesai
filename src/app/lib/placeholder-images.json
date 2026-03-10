@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -135,25 +136,25 @@
     {
       "id": "logo-amazon",
       "description": "Amazon Icon",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg",
+      "imageUrl": "/amazon.jpg",
       "imageHint": "amazon logo"
     },
     {
       "id": "logo-philips",
       "description": "Philips Shield",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Philips_logo_emblem.svg",
+      "imageUrl": "/philips.jpg",
       "imageHint": "philips logo"
     },
     {
       "id": "logo-northeastern",
       "description": "Northeastern Seal",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b2/Northeastern_University_seal.svg",
+      "imageUrl": "/northeastern.jpg",
       "imageHint": "university logo"
     },
     {
       "id": "logo-accenture",
       "description": "Accenture Icon",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Accenture_logo_2017.svg",
+      "imageUrl": "/accenture.jpg",
       "imageHint": "accenture logo"
     }
   ]

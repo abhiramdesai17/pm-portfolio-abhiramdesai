@@ -1,3 +1,4 @@
+
 import { Navbar } from "@/components/Navbar";
 import { WorkCard } from "@/components/WorkCard";
 import { SkillMatrix } from "@/components/SkillMatrix";
@@ -83,9 +84,13 @@ export default function Home() {
               opportunities and rapidly prototyping end-to-end solutions.
             </p>
 
-            <div className="space-y-6 pt-4 flex flex-col items-center">
-              <span className="text-sm font-bold uppercase tracking-[0.4em] text-muted-foreground/60">Experience</span>
-              <div className="flex flex-wrap items-center justify-center gap-10">
+            <div className="space-y-8 pt-4 flex flex-col items-center">
+              <div className="flex items-center gap-4 text-muted-foreground/60">
+                 <span className="text-[10px] font-bold uppercase tracking-[0.4em]">Experience</span>
+                 <div className="h-px w-12 bg-border" />
+              </div>
+              
+              <div className="flex flex-wrap items-center justify-center gap-12">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -94,14 +99,14 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative flex h-24 w-24 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 overflow-hidden shadow-2xl bg-white"
+                      className="group relative h-10 w-28 transition-all hover:scale-110 active:scale-95 flex items-center justify-center"
                     >
-                      {logo?.imageUrl && logo.imageUrl !== "" && (
+                      {logo?.imageUrl && (
                         <Image 
                           src={logo.imageUrl} 
                           alt={exp.name} 
                           fill
-                          className="object-cover transition-all duration-500"
+                          className="object-contain transition-all duration-500"
                         />
                       )}
                     </a>
