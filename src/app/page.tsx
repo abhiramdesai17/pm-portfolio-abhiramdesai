@@ -85,7 +85,7 @@ export default function Home() {
 
             <div className="space-y-6 pt-4 flex flex-col items-center">
               <span className="text-sm font-bold uppercase tracking-[0.4em] text-muted-foreground/60">Experience</span>
-              <div className="flex flex-wrap items-center justify-center gap-8">
+              <div className="flex flex-wrap items-center justify-center gap-10">
                 {experiences.map((exp) => {
                   const logo = PlaceHolderImages.find(img => img.id === exp.id);
                   return (
@@ -94,17 +94,15 @@ export default function Home() {
                       href={exp.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group relative flex h-24 w-24 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 border border-border/40 hover:border-border overflow-hidden bg-white shadow-xl"
+                      className="group relative flex h-24 w-24 items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 overflow-hidden shadow-2xl bg-white"
                     >
                       {logo?.imageUrl && logo.imageUrl !== "" && (
-                        <div className="relative h-14 w-14">
-                          <Image 
-                            src={logo.imageUrl} 
-                            alt={exp.name} 
-                            fill
-                            className="object-contain transition-all duration-500"
-                          />
-                        </div>
+                        <Image 
+                          src={logo.imageUrl} 
+                          alt={exp.name} 
+                          fill
+                          className="object-cover transition-all duration-500"
+                        />
                       )}
                     </a>
                   );
