@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Phone, Globe } from "lucide-react";
-import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 const experiences = [
   {
@@ -151,6 +151,8 @@ export default function ResumePage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

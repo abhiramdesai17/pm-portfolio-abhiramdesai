@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
 import { Hammer, Sparkles } from "lucide-react";
+import { Footer } from "@/components/Footer";
 
 export default function PlayPage() {
   return (
@@ -45,6 +46,8 @@ export default function PlayPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
