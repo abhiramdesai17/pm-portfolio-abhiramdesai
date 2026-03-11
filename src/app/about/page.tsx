@@ -116,7 +116,7 @@ export default function AboutPage() {
 
       {/* 4. Boston & The PM Discovery */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="max-w-4xl mx-auto space-y-16">
+        <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-6">
             <h2 className="text-5xl font-headline font-bold">The Intersection</h2>
             <p className="text-xl font-light text-muted-foreground italic">
