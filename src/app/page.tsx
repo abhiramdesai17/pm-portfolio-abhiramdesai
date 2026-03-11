@@ -156,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+      <Footer showContact={true} />
     </div>
   );
 }
