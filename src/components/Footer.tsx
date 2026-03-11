@@ -38,14 +38,13 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="pt-16 flex flex-col md:flex-row justify-between gap-10 text-[10px] text-muted-foreground border-t border-border/10 uppercase font-bold tracking-[0.3em]">
-          <p className="font-light">© 2026 Abhiram Desai.</p>
-          <div className="flex flex-wrap gap-10">
-            <Link href="/" className="hover:text-foreground transition-colors">Work</Link>
-            <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
-            <Link href="/play" className="hover:text-foreground transition-colors">Play</Link>
-            <Link href="/resume" className="hover:text-foreground transition-colors">Resume</Link>
-          </div>
+        <div className="pt-16 flex flex-col md:flex-row justify-between items-center gap-10 border-t border-border/10">
+          <p className="text-sm text-muted-foreground font-light italic">
+            Made with AI, fruit salad & over multiple boarding passes :)
+          </p>
+          <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-[0.3em]">
+            © 2026 Abhiram Desai
+          </p>
         </div>
       </div>
     </footer>
